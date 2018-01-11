@@ -1,0 +1,45 @@
+= render "shared/adminheader"
+= render "shared/leftsidebar"
+.adminmainwindow
+  .adminmainwindow__title
+    %h3
+      新規商品仕入
+    = form_for @item do |f|
+      .adminmainwindow__fields
+        = f.label :name, "商品名"
+        = f.text_field :name, placeholder: "商品名を入力してください"
+      .adminmainwindow__fields
+        = f.label :image, "商品画像"
+        = f.file_field :image
+      .adminmainwindow__fields
+        = f.label :detail, "商品詳細"
+        = f.text_field :detail, placeholder: "商品説明を入力してください"
+      .adminmainwindow__fields
+        = f.label :maker, "メーカー"
+        = f.text_field :maker, placeholder: "メーカーを入力してください"
+      .adminmainwindow__fields
+        = f.label :unit_cost, "仕入単価"
+        = f.text_field :unit_cost, placeholder: "仕入単価を入力してください"
+      .adminmainwindow__fields
+        = f.label :quantity, "仕入数量"
+        = f.text_field :quantity, placeholder: "仕入数量を入力してください"
+      .adminmainwindow__fields
+        = f.label :sell_price, "販売価格"
+        = f.text_field :sell_price, placeholder: "販売価格を入力してください"
+      .adminmainwindow__fields
+        = f.label :shipping_cost, "送料"
+        = f.text_field :shipping_cost, placeholder: "送料を入力してください"
+      .adminmainwindow__fields
+        = f.label :category_id, "カテゴリー"
+        - category_options = Category.order(:id).map { |c| [c.name, c.id, data: { children_path: category_sub_categories_path(c) }] }
+        = f.select :category_id, category_options, { include_blank: true }, class: 'select-parent'
+      .adminmainwindow__fields
+        = f.label :sub_category_id, "ジャンル"
+        - sub_categories = @item.category_id.try(:sub_categories) || []
+        - sub_category_options = sub_categories.map { |c| [c.name, c.id] }
+        = f.select :sub_category_id, sub_category_options, { include_blank: true }, class: 'select-children'
+      .adminmainwindow__fields
+        = f.hidden_field :item_flg, value:0
+      .adminmainwindow__fields
+        = f.submit value: "Send", class: "SendButton"
+= render "shared/adminfooter"

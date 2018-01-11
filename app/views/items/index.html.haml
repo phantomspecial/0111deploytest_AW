@@ -1,0 +1,45 @@
+= render "shared/adminheader"
+= render "shared/leftsidebar"
+.adminmainwindow
+  .adminmainwindow__boxes
+    .adminmainwindow__boxes__items
+      %h3
+        仕入履歴
+      %table
+        %tr
+          %th id
+          %th stock_id
+          %th name
+          %th image
+          %th detail
+          %th maker
+          %th unit_cost
+          %th quantity
+          %th sell_price
+          %th shipping_cost
+          %th CRUD
+        - @items.each do |item|
+          %tr
+            %td
+              = item.id
+            %td
+              = item.stock_id
+            %td
+              = item.name
+            %td
+              = image_tag item.image, width:30, height:24
+            %td
+              = item.detail
+            %td
+              = item.maker
+            %td
+              = item.unit_cost.to_s(:delimited)
+            %td
+              = item.quantity.to_s(:delimited)
+            %td
+              = item.sell_price.to_s(:delimited)
+            %td
+              = item.shipping_cost.to_s(:delimited)
+            %td
+              = link_to "編集", "/items/#{item.id}/edit",   method: :get
+= render "shared/adminfooter"

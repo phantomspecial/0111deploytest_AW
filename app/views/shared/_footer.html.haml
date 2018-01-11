@@ -1,0 +1,103 @@
+.navLeftFooter
+  .navLeftFooter__navFooterBackToTop
+    .navLeftFooter__navFooterBackToTop__navFooterBackToTopText
+      = link_to "トップへ戻る" , "#"
+
+  .navLeftFooter__navFooterVerticalColumn
+    .navLeftFooter__navFooterVerticalColumn__tbody.clearfix
+      .navLeftFooter__navFooterVerticalColumn__tbody__tr1
+        .navLeftFooter__navFooterVerticalColumn__tbody__tr1_title
+          Amazonについて
+        .navLeftFooter__navFooterVerticalColumn__tbody__tr1_record
+          .ul
+            %li<>
+              = link_to "採用情報", ""
+            %li<>
+              = link_to "Amazonについて",""
+            %li<>
+              = link_to "プレスリリース",""
+            %li<>
+              = link_to "Amazonと地球", ""
+            %li<>
+              = link_to "Amazonのコミュニティ活動",""
+            %li<>
+              = link_to "Amazon Story",""
+            %li<>
+              = link_to "AmazonGlobal",""
+        %td.navFooterColSpacerInner
+
+      .navLeftFooter__navFooterVerticalColumn__tbody__tr2
+        .navLeftFooter__navFooterVerticalColumn__tbody__tr2_title
+          Amazonでビジネス
+        .navLeftFooter__navFooterVerticalColumn__tbody__tr2_record
+          .ul
+            %li<>
+              = link_to "Amazonで売る",""
+            %li<>
+              = link_to "フルフィルメント by Amazon", ""
+            %li<>
+              = link_to "Amazon Businessで法人販売",""
+            %li<>
+              = link_to "アソシエイト（アフィリエイト）",""
+            %li<>
+              = link_to "Amazonで広告掲載をする",""
+            %li<>
+              = link_to "Amazonで出版",""
+            %li<>
+              = link_to "Amazonの仕入先になる",""
+            %li<>
+              = link_to "›すべてのサービスを見る",""
+        %td.navFooterColSpacerInner
+
+      .navLeftFooter__navFooterVerticalColumn__tbody__tr3
+        .navLeftFooter__navFooterVerticalColumn__tbody__tr3_title
+          Amazonでのお支払い
+        .navLeftFooter__navFooterVerticalColumn__tbody__tr3_record
+          .ul
+            %li<>
+              = link_to "Amazonポイント",""
+            %li<>
+              = link_to "フルフィルメント by Amazon",""
+            %li<>
+              = link_to "Amazonギフト券",""
+            %li<>
+              = link_to "Amazon Mastercard",""
+            %li<>
+              = link_to "クレジットカード＆保険",""
+            %li<>
+              = link_to "パートナーポイントプログラム",""
+            %li<>
+              = link_to "Amazonギフト券チャージタイプ",""
+            %li<>
+              = link_to "すべての支払い方法を見る",""
+        %td.navFooterColSpacerInner
+
+      .navLeftFooter__navFooterVerticalColumn__tbody__tr4
+        .navLeftFooter__navFooterVerticalColumn__tbody__tr4_title
+          ヘルプ＆ガイド
+        .navLeftFooter__navFooterVerticalColumn__tbody__tr4_record
+          .ul
+            %li<>
+              = link_to "配送料と配送情報",""
+            %li<>
+              = link_to "商品の返品・交換",""
+            %li<>
+              = link_to "コンテンツと端末の管理",""
+            %li<>
+              = link_to "ストア・特集一覧",""
+            %li<>
+              = link_to "Amazonアシスタント",""
+            %li<>
+              = link_to "ヘルプ"
+        %td.navFooterColSpacerInner
+
+.navFooterLine
+  .nav-logo-base
+    = image_tag "logo.png"
+  .icp-button#icp-touch-link-country
+  .icp-button#icp-touch-link-language
+
+.admin
+  - if user_signed_in?
+    - if current_user.admin_flg == true
+      = link_to 'admin', admins_path

@@ -1,0 +1,161 @@
+%header
+  .navbar{role: "navigation"}
+    .nav-over
+      .nav-over__left
+        = link_to root_path do
+          = image_tag "logo.png", class: "logo_image"
+      .nav-over__right
+        = image_tag "campaign.png"
+      .nav-over__center
+        .nav-over__center__content
+          = form_tag(search_stocks_path, method: :get) do
+            .nav-over__center__content__left
+              = select_tag 'category_id', options_from_collection_for_select(Category.all, "id", "name"), include_blank: 'すべてのカテゴリ', class: "nav-over__center__content__left__searchselect"
+            .nav-over__center__content__center
+              .nav-over__center__content__center__search-field
+                %input#stock_name_field.nav-over__center__content__center__input{ name: "keyword", placeholder: "", type: "text", value: "" }
+                .nav-over__center__content__right
+                  %span.fa.fa-search{"aria-hidden" => "true"}
+                  %button.nav-over__center__content__right__search_btn{ title: "検索", type: "submit"}
+    .nav-below
+      .nav-below__categoly
+        = link_to categories_path do
+          %span.nav-below__categoly__name カテゴリー
+          %span.triangle
+        %ul.nav-below__categoly__ul
+          %li.nav-below__categoly__li
+            = link_to "プライム・ビデオ", "/categories/1/sub_categories/1"
+          %li
+            = link_to "Amazon Music Unlimited", "/categories/2/sub_categories/6"
+          %li
+            = link_to "アプリ", "/categories/3/sub_categories/11"
+          %li
+            = link_to "Echo Dot", "/categories/4/sub_categories/20"
+          %li
+            = link_to "Fire 7", "/categories/5/sub_categories/23"
+          %li
+            = link_to "Fire TV Stick", "/categories/6/sub_categories/34"
+          %li
+            = link_to "Kindle", "/categories/7/sub_categories/42"
+          %li
+            = link_to "すべてのAmazonフレッシュ", "/categories/8/sub_categories/57"
+          %li
+            = link_to "本", "/categories/9/sub_categories/74"
+          %li
+            = link_to "DVD", "/categories/10/sub_categories/94"
+          %li
+            = link_to "キッチン家電", "/categories/11/sub_categories/104"
+          %li
+            = link_to "パソコン・タブレット", "/categories/12/sub_categories/127"
+          %li
+            = link_to "キッチン用品・食器", "/categories/13/sub_categories/153"
+          %li
+            = link_to "食品・グルメ", "/categories/14/sub_categories/171"
+          %li
+            = link_to "医薬品", "/categories/15/sub_categories/195"
+          %li
+            = link_to "ベビー＆マタニティ", "/categories/16/sub_categories/219"
+          %li
+            = link_to "レディース", "/categories/17/sub_categories/225"
+          %li
+            = link_to "自転車", "/categories/18/sub_categories/230"
+          %li
+            = link_to "カー用品", "/categories/19/sub_categories/237"
+          %li
+            = link_to "Amazon Mastercard", "/categories/20/sub_categories/246"
+      .nav-below__amazonpoint
+        .nav-below__amazonpoint__mystore
+          - if user_signed_in?
+            =link_to "マイストア", user_path(current_user), :class => "link"
+          - else
+            =link_to "マイストア", new_user_session_path, :class => "link"
+
+        .nav-below__amazonpoint__timesale タイムセール
+        .nav-below__amazonpoint__gift     ギフト券
+
+      .nav-below__tools
+        .nav-below__tools__account
+          = link_to users_path, :class => "nav-below__tools__account__link" do
+            %span.nav-below__tools__account__nickname
+            - if user_signed_in?
+              = current_user.nickname
+              さん
+            -else
+              ログインしていません
+            %span.nav-below__tools__account__list
+              アカウント＆リスト
+            %span.triangle.triangle__account
+          %ul.nav-below__tools__ul
+            %li
+              .nav-below__tools__ul__left
+                %ul.nav-below__tools__ul__inner
+                  %li.nav-below__tools__ul__inner__title リスト
+                  %li
+                    = link_to "ほしい物リスト", ""
+                  %li
+                    = link_to "映画、DVD", ""
+                  %li
+                    = link_to "本", ""
+                %ul.nav-below__tools__ul__inner
+                  %li
+                    = link_to "ほしい物リストを作成する", ""
+                  %li
+                    = link_to "ほしい物リストを見つける", ""
+                  %li
+                    = link_to "何でもほしい物リスト", ""
+              .nav-below__tools__ul__right
+                %ul.nav-below__tools__ul__inner
+                  %li.nav-below__tools__ul__inner__title アカウントサービス
+                  %li
+                    = link_to "アカウントサービス", users_path
+                  %li
+                    = link_to "注文履歴", orders_path
+                  %li
+                    = link_to "バーチャルダッシュ", ""
+                  %li
+                    = link_to "ほしい物リスト", ""
+                  %li
+                    = link_to "おすすめ商品", ""
+                  %li
+                    = link_to "Amazon定期おトク便情報", ""
+                  %li
+                    = link_to "Amazonプライム会員情報", ""
+                  %li
+                    = link_to "ビジネスアカウントを登録", ""
+                %ul.nav-below__tools__ul__inner
+                  %li
+                    = link_to "コンテンツと端末の管理", ""
+                  %li
+                    = link_to "Prime Music", ""
+                  %li
+                    = link_to "ミュージックライブラリにアクセス", ""
+                  %li
+                    = link_to "お客様のAmazon Drive", ""
+                  %li
+                    = link_to "ウォッチリスト", ""
+                  %li
+                    = link_to "ビデオライブラリ", ""
+                  %li
+                    = link_to "お客様のKindle Unlimited", ""
+                  %li
+                    = link_to "ゲーム&PCソフトダウンロードライブラリ", ""
+                  %li
+                    = link_to "アプリライブラリとデバイスの管理", ""
+                - if user_signed_in?
+                  %ul.nav-below__tools__ul__inner
+                    %li
+                      = link_to "#{current_user.nickname}さんではありませんか？サインアウト", destroy_user_session_path, method: :delete
+
+          .nav-below__categoly
+        .nav-below__tools__order
+          %span
+            = link_to "注文履歴", orders_path
+        .nav-below__tools__cart
+          = link_to carts_path do
+            - if user_signed_in?
+              %span
+                = gets_cart_itemcount
+            - else
+              %span
+                0
+            = image_tag "cart.png"

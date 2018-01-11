@@ -1,0 +1,41 @@
+= render "shared/header"
+
+.wrapper
+  .searchTemplate
+    .searchTemplate__left
+      %h1.searchTemplate__left__h1
+        検索結果
+        = @stocks.total_count
+        のうち
+        = @search_result_count
+        件
+        %span
+          "
+          = @search_result_string
+          "
+    .searchTemplate__right
+      .searchTemplate__right__selectbox
+        = form_tag(search_stocks_path, method: "get") do
+          %span 並び替え:
+          %select.searchTemplate__right__searchselect{ id: "sortselecter", name: "value"}
+            %option{selected: "selected", value: "1"} キーワードに関連する商品
+            %option{value: "2"} 価格の安い順番
+            %option{value: "3"} 価格の高い順番
+            %option{value: "4"} レビューの評価順
+            %option{value: "5"} 最新商品
+  .content.clearfix
+    = render 'search_sidebar'
+
+    .searchResult
+      %ul.searchResult__ul.clearfix
+        - if @search_result_count == 0
+          = render 'search_noresult', word: @search_result_string
+        - else
+          = render partial: 'stock', collection: @stocks, as: :stock
+
+      .text-center
+        %ul.pagination.clearfix
+          = paginate @stocks
+
+
+= render "shared/footer"

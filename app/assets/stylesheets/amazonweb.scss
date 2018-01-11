@@ -1,0 +1,555 @@
+// Top page
+.wrapper {
+  min-width: 1400px;
+}
+
+.a-carousel-col{
+  height: 300px;
+  width: 100%;
+    .goto-prevpage{
+    width: 80px;
+    }
+    .goto-nextpage{
+    width: 80px;
+    }
+  }
+
+.hud-dashboard{
+  height: 65px;
+  width: 100%;
+  background-color: #232f3e;
+  &__a-section1{
+    color: black;
+    float: left;
+    padding: 7px 0 0 20px;
+    img {
+      border-radius: 25px;
+    }
+    &__a{
+      font-size: 15px;
+      font-weight: bold;
+      float: right;
+      color: #ffffff;
+      padding-left: 10px;
+      position: relative;
+      top: 50%;
+      transform: translateY(50%);
+    }
+  }
+  &__a-section2{
+    color: black;
+    float: left;
+    &__a{
+      font-size: 16px;
+      float: left;
+      padding: 7px 0 0 40px;
+      color: #ffffff;
+      a {
+        color: #FFF;
+        text-decoration: none;
+        span {
+          font-size: 12px;
+          color: #ccc;
+        }
+      }
+    }
+  }
+  &__span__modal-link{
+    &__a{
+      font-size: 16px;
+      float: left;
+      padding: 7px 0 0 40px;
+      color: #ffffff;
+      a {
+        color: #FFF;
+        text-decoration: none;
+        span {
+          font-size: 12px;
+          color: #ccc;
+        }
+      }
+    }
+  }
+  &__primevideo{
+  width: 310px;
+  border: #0066c0;
+  float: right;
+  padding-left: 40px;
+  }
+}
+
+.btfContent1{
+  padding-left: 20px;
+  width: calc(100% - 340px);
+  float: left;
+  &__image-shoveler-ns{
+    font-size: 20px;
+    padding: 20px 0 10px 0;
+    &-images{
+      width: 200px;
+      height: 200px;
+    }
+  }
+  &__uber-widget-ns-images {
+    display: flex;
+    overflow: scroll;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      width: auto;
+      height: auto;
+    }
+    a {
+      margin-right: 20px;
+    }
+  }
+}
+
+// Top page Side bar
+.btfContentright{
+  width: 300px;
+  float: right;
+}
+
+.btfContentright-two {
+  background-color: #F7F7F7;
+  padding-bottom: 50px;
+  h3 {
+    color: #444;
+    text-align: center;
+    padding: 50px 0 30px;
+  }
+  .listRow {
+    width: 140px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 10px;
+    position: relative;
+    .ranking {
+      color: #ccc;
+      font-size: 36px;
+      float: left;
+      line-height: 36px;
+      position: absolute;
+      top: 50%;
+      margin: -.5em;
+    }
+    .ranking-image {
+      text-align: center;
+      img {
+        max-width: 75px;
+        max-height: 100px;
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Footer
+.navLeftFooter{
+  clear: both;
+  width: 100vw;
+  color: #FFFFFF;
+  &__navFooterBackToTop{
+    background-color: #4b5767;
+    padding: 15px 0 15px 0;
+    &__navFooterBackToTopText{
+      text-align: center;
+    }
+  }
+  &__navFooterVerticalColumn{
+    height: 300px;
+    background-color: #262f3d;
+    &__tbody{
+      width: 1000px;
+      margin: auto;
+      padding: 30px 0;
+      &__tr1{
+        float: left;
+        padding-right: 90px;
+        &_title{
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        &_record{
+          font-size: 12px;
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
+      &__tr2{
+        float: left;
+        padding-right: 90px;
+        &_title{
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        &_record{
+          font-size: 12px;
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
+      &__tr3{
+        float: left;
+        padding-right: 90px;
+        &_title{
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        &_record{
+          font-size: 12px;
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
+      &__tr4{
+        float: left;
+        &_title{
+          font-size: 16px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+        &_record{
+          font-size: 12px;
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.navLeftFooter__navFooterBackToTop__navFooterBackToTopText a{
+      color: #FFFFFF;
+      text-decoration: none;
+}
+
+.ul{
+  list-style: none;
+}
+
+.ul a{
+  color: #ddd;
+  text-decoration: none;
+}
+
+.navFooterLine{
+  clear:both;
+  text-align: center;
+  width: 100vw;
+  height: 100px;
+  background-color: #262f3d;
+  border-top: 1px solid;
+  border-color: #3c4551;
+  .nav-logo-base {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.admin{
+  padding: 10px 0 10px 0;
+  background-color: #141a22;
+  width: 100vw;
+  height: 30px;
+  text-align: center;
+  a {
+    text-decoration: none;
+    color: white;
+    // margin: 50%;
+    font-family: arial;
+    }
+  // &__admin{
+  //   color: #ffffff;
+  //   font-size: 10px;
+  //   padding-left: 250px;
+  // }
+}
+
+// 管理者ページ
+// ヘッダー
+.adminheader{
+  height: 80px;
+  width: 100%;
+  background-color: #232f3e;
+  color: #FFFFFF;
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.2);
+  border-bottom: 1px solid #1b232d;
+  &__title{
+    float: left;
+    padding-top: 15px;
+      .title {
+        display: inline-block;
+        position: relative;
+        top: -16px;
+        left: -33px;
+        font-size: 18px;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+        color: #FFF;
+      }
+  }
+  &__right {
+    float: right;
+    height: 80px;
+  }
+  &__username{
+    float: left;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+      span.currentuser_name {
+        font-weight: bold;
+      }
+  }
+  &__buttons{
+    float: left;
+    margin: 0 30px 0 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    &__sitebutton{
+      float: left;
+    }
+    &__logoutbutton{
+      float: left;
+    }
+  }
+}
+
+// ボタン類
+.adminheader__buttons__sitebutton{
+    display: inline-block;
+    // padding: 0.5em 1em;
+    text-decoration: none;
+    background: linear-gradient(to bottom,#f6c88f,#ed9220);/*ボタン色*/
+    box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+    border: 1px solid;
+    border-color: #ca7c1b #be751a #a56616;
+    color: #FFFFFF;
+    border-radius: 3px;
+    margin-left: 30px;
+}
+
+.adminheader__buttons__logoutbutton{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #f2983e;/*ボタン色*/
+    color: #FFFFFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+    margin-left: 30px;
+}
+// .adminheader__buttons:active {/*ボタンを押したとき*/
+//     -ms-transform: translateY(4px);
+//     -webkit-transform: translateY(4px);
+//     transform: translateY(4px);/*下に動く*/
+//     border-bottom: none;/*線を消す*/
+// }
+
+.adminheader__buttons a{
+  color: #000;
+  font-size: 14px;
+  text-decoration: none;
+  padding: 7px 20px;
+  display: inline-block;
+}
+
+
+// 本体部分
+// 左サイドバー
+.adminleftwindow{
+  float: left;
+  &__linkbox{
+    width: 160px;
+    padding: 0 30px 35px;
+    margin-top: 20px;
+    border-right: 1px solid #dedede;
+    &__title{
+      font-size: 20px;
+      padding-top: 20px;
+        h2 {
+          font-size: 18px;
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+    }
+    &__links{
+      font-size: 16px;
+      padding-left: 10px;
+        a {
+          color: #0066c0;
+          text-decoration: none;
+          font-size: 14px;
+        }
+        a:hover {
+          color: #ed9324;
+        }
+    }
+  }
+}
+
+// メインウィンドウ
+
+table, td, th {
+border: 1px #dedede solid !important;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+th {
+  padding: 10px 20px;
+}
+td {
+  text-align: center;
+}
+
+.adminmainwindow{
+  width: calc(100% - 240px);
+  float: right;
+  &__boxes{
+    margin: 35px 55px;
+    &__users {
+      td {
+        padding: 10px 15px;
+      }
+    }
+    &__items {
+        td {
+          padding: 10px 10px;
+        }
+    }
+    &__orders{
+      &__title{
+        font-size: 18px;
+          h3 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 30px;
+          }
+      }
+      &__detail{
+        font-size: 14px;
+          th {
+            padding: 10px 20px;
+          }
+          td {
+            padding: 10px 20px;
+            text-align: center;
+          }
+      }
+    }
+    &__stocks{
+      padding-top: 50px;
+      &__title{
+        font-size: 18px;
+        h3 {
+          font-size: 22px;
+          font-weight: bold;
+          margin-bottom: 30px;
+        }
+      }
+      &__detail{
+      }
+    }
+    &__users{
+
+    }
+  }
+  &__title{
+    padding: 35px 55px;
+    font-size: 24px;
+  }
+  &__fields{
+    margin-top: 30px;
+    font-size: 20px;
+      label {
+        font-size: 16px;
+        color: #717171;
+      }
+      input {
+        padding: 5px 15px;
+        border: 1px solid #dedede;
+        border-radius: 4px;
+        font-size: 18px;
+        width: 300px;
+      }
+  }
+}
+
+.SendButton{
+  width: 100px !important;
+  color: #000 !important;
+  padding: 10px 15px !important;
+  font-size: 16px !important;
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(to bottom,#f6c88f,#ed9220);/*ボタン色*/
+  box-shadow: 0 1px 0 rgba(255,255,255,.6) inset;
+  border: 1px solid;
+  border-color: #ca7c1b #be751a #a56616;
+  color: #FFFFFF;
+  border-radius: 3px;
+}
+
+// テーブル部分
+table, td, th{
+  border: 1px solid;
+  border-color: black;
+}
+
+// フッター部分
+.adminfooter{
+  clear: both;
+  text-align: center;
+  width: 100%;
+  height: 60px;
+  background-color: #232f3e;
+  color: #FFFFFF;
+    &__title{
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      span {
+        font-size: 14px;
+        color: #eee;
+      }
+    }
+}
+
+
+// エラー画面
+.errorwindow{
+  padding-top: 300px;
+  text-align: center;
+  &__main-message{
+    font-size: 64px;
+    color: #FF0000;
+    font-family: fantasy;
+  }
+  &__sub-message{
+    font-size: 32px;
+    font-family: san-serif;
+  }
+  &__toplink{
+    font-size: 24px;
+    font-family: san-serif;
+  }
+}

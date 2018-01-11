@@ -1,0 +1,21 @@
+= render "shared/adminheader"
+= render "shared/leftsidebar"
+.adminmainwindow
+  .adminmainwindow__title
+    %h3
+      既存商品仕入
+    = form_for @item do |f|
+      .adminmainwindow__fields
+        = f.label :stock_id, "商品ID"
+        = f.text_field :stock_id, placeholder: "商品IDを入力してください"
+      .adminmainwindow__fields
+        = f.label :unit_cost, "仕入単価"
+        = f.text_field :unit_cost, placeholder: "仕入単価を入力してください"
+      .adminmainwindow__fields
+        = f.label :quantity, "仕入数量"
+        = f.text_field :quantity, placeholder: "仕入数量を入力してください"
+      .adminmainwindow__fields
+        = f.hidden_field :item_flg, value:1
+      .adminmainwindow__fields
+        = f.submit value: "Send", class: "SendButton"
+= render "shared/adminfooter"
