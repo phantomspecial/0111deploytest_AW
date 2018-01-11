@@ -1,0 +1,267 @@
+  [1m[35m (21.6ms)[0m  [1m[35mCREATE TABLE `schema_migrations` (`version` varchar(255) PRIMARY KEY) ENGINE=InnoDB[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE `ar_internal_metadata` (`key` varchar(255) PRIMARY KEY, `value` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT GET_LOCK('7080628331271985770', 0);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateStocks (20171218082948)
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE `stocks` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `image` varchar(255) NOT NULL, `detail` varchar(255) NOT NULL, `maker` varchar(255) NOT NULL, `avg_unit_cost` int NOT NULL, `current_stock` int NOT NULL, `sell_price` int NOT NULL, `shipping_cost` int NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171218082948')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateItems (20171218094829)
+  [1m[35m (14.2ms)[0m  [1m[35mCREATE TABLE `items` (`id` int AUTO_INCREMENT PRIMARY KEY, `stock_id` int, `name` varchar(255) NOT NULL, `image` varchar(255) NOT NULL, `detail` varchar(255) NOT NULL, `maker` varchar(255) NOT NULL, `unit_cost` int NOT NULL, `quantity` int NOT NULL, `sell_price` int NOT NULL, `shipping_cost` int NOT NULL, `item_flg` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_items_on_stock_id`  (`stock_id`), CONSTRAINT `fk_rails_fd338e5742`
+FOREIGN KEY (`stock_id`)
+  REFERENCES `stocks` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171218094829')[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to DeviseCreateUsers (20171220201408)
+  [1m[35m (12.4ms)[0m  [1m[35mCREATE TABLE `users` (`id` int AUTO_INCREMENT PRIMARY KEY, `email` varchar(255) DEFAULT '' NOT NULL, `encrypted_password` varchar(255) DEFAULT '' NOT NULL, `first_name` varchar(255) NOT NULL, `last_name` varchar(255) NOT NULL, `nickname` varchar(255) NOT NULL, `postal_code` int NOT NULL, `pref` varchar(255) NOT NULL, `city` varchar(255) NOT NULL, `street` varchar(255) NOT NULL, `apartment_roomnumber` varchar(255), `telnumber` varchar(255) NOT NULL, `admin_flg` tinyint(1), `reset_password_token` varchar(255), `reset_password_sent_at` datetime, `remember_created_at` datetime, `sign_in_count` int DEFAULT 0 NOT NULL, `current_sign_in_at` datetime, `last_sign_in_at` datetime, `current_sign_in_ip` varchar(255), `last_sign_in_ip` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (15.6ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_email`  ON `users` (`email`) [0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_users_on_reset_password_token`  ON `users` (`reset_password_token`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171220201408')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCarts (20171226070914)
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE `carts` (`id` int AUTO_INCREMENT PRIMARY KEY, `quantity` int NOT NULL, `stock_id` int, `user_id` int, `buylater_flg` tinyint(1) NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_carts_on_stock_id`  (`stock_id`),  INDEX `index_carts_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_c72cb25243`
+FOREIGN KEY (`stock_id`)
+  REFERENCES `stocks` (`id`)
+, CONSTRAINT `fk_rails_ea59a35211`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171226070914')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20171227023751)
+  [1m[35m (12.8ms)[0m  [1m[35mCREATE TABLE `categories` (`id` int AUTO_INCREMENT PRIMARY KEY, `name` varchar(255) NOT NULL, `description` text NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171227023751')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrders (20171227052232)
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE TABLE `orders` (`id` int AUTO_INCREMENT PRIMARY KEY, `user_id` int, `total` int, `total_shippingcost` int, `payments` varchar(255), `status` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171227052232')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateOrderdetails (20171227052322)
+  [1m[35m (12.7ms)[0m  [1m[35mCREATE TABLE `orderdetails` (`id` int AUTO_INCREMENT PRIMARY KEY, `order_id` int, `stock_id` int, `quantity` int, `sell_price` int, `shipping_cost` int, `total_price` int, `total_shippingcost` int, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20171227052322')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateSubCategories (20180105051820)
+  [1m[35m (12.0ms)[0m  [1m[35mCREATE TABLE `sub_categories` (`id` int AUTO_INCREMENT PRIMARY KEY, `category_id` int, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180105051820')[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddIndexCategoriesName (20180106080928)
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE UNIQUE INDEX `index_categories_on_name`  ON `categories` (`name`) [0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180106080928')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryIdToStocks (20180109084909)
+  [1m[35m (13.1ms)[0m  [1m[35mALTER TABLE `stocks` ADD `category_id` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180109084909')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateReviews (20180109160933)
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE `reviews` (`id` int AUTO_INCREMENT PRIMARY KEY, `stock_id` int, `user_id` int, `title` varchar(255) NOT NULL, `rate` int NOT NULL, `review` text NOT NULL, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_reviews_on_stock_id`  (`stock_id`),  INDEX `index_reviews_on_user_id`  (`user_id`), CONSTRAINT `fk_rails_8b324f08d8`
+FOREIGN KEY (`stock_id`)
+  REFERENCES `stocks` (`id`)
+, CONSTRAINT `fk_rails_74a66bd6c5`
+FOREIGN KEY (`user_id`)
+  REFERENCES `users` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180109160933')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddSubCategoryIdToStocks (20180110025711)
+  [1m[35m (12.3ms)[0m  [1m[35mALTER TABLE `stocks` ADD `sub_category_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180110025711')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddSubCategoryIdToItems (20180110045518)
+  [1m[35m (20.1ms)[0m  [1m[35mALTER TABLE `items` ADD `sub_category_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180110045518')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryIdToItems (20180110065915)
+  [1m[35m (17.1ms)[0m  [1m[35mALTER TABLE `items` ADD `category_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180110065915')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to ChangeColumnToStock (20180111020743)
+  [1m[35m (18.6ms)[0m  [1m[35mALTER TABLE `stocks` CHANGE `category_id` `category_id` int[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20180111020743')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `ar_internal_metadata` (`key`, `value`, `created_at`, `updated_at`) VALUES ('environment', 'development', '2018-01-11 17:48:35', '2018-01-11 17:48:35')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT RELEASE_LOCK('7080628331271985770')[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `carts`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `categories`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'categories'[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW CREATE TABLE `items`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'items'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `orderdetails`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `orders`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'orders'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `reviews`[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'reviews'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `stocks`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'stocks'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `sub_categories`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'sub_categories'[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSHOW CREATE TABLE `users`[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSHOW TABLE STATUS LIKE 'users'[0m
+Started GET "/" for 127.0.0.1 at 2018-01-12 02:48:43 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  Rendered shared/_header.html.haml (3502.3ms)
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (10.8ms)
+  Rendered stocks/index.html.haml within layouts/application (3549.0ms)
+Completed 200 OK in 3773ms (Views: 3724.6ms | ActiveRecord: 23.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-12 02:48:55 +0900
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-01-12 02:48:55 +0900
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.haml within layouts/application
+  Rendered devise/shared/_userheader.html.haml (3.0ms)
+  Rendered devise/shared/_userfooter.html.haml (2.0ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (18.2ms)
+Completed 200 OK in 132ms (Views: 114.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2018-01-12 02:48:57 +0900
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.haml within layouts/application
+  Rendered devise/shared/_userheader.html.haml (3.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `users`[0m
+  Rendered devise/shared/_userfooter.html.haml (2.7ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (23.1ms)
+Completed 200 OK in 142ms (Views: 140.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2018-01-12 02:49:31 +0900
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PsVNUyD4f1p4xfReEcFJaD4FGC2S8FUmF2MKqm45OpLbWRuQFbEqoVJXBAgK1HgZQI37KtXl7wLwDJQm+vQOUQ==", "user"=>{"email"=>"administrator1@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "first_name"=>"admin", "last_name"=>"master", "nickname"=>"admin", "postal_code"=>"100-0001", "pref"=>"東京都", "city"=>"渋谷区", "street"=>"渋谷１−１−１", "apartment_roomnumber"=>"", "telnumber"=>"000-0000-0000", "admin_flg"=>"true"}, "commit"=>"Amazonアカウントを作成"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM `users` WHERE `users`.`email` = BINARY 'administrator1@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `users` (`email`, `encrypted_password`, `first_name`, `last_name`, `nickname`, `postal_code`, `pref`, `city`, `street`, `apartment_roomnumber`, `telnumber`, `admin_flg`, `created_at`, `updated_at`) VALUES ('administrator1@gmail.com', '$2a$11$kkRagcVDOW.JNj6yVSeyk.JceIwElH94NWzNes2VsnXctUmbHzR5q', 'admin', 'master', 'admin', 100, '東京都', '渋谷区', '渋谷１−１−１', '', '000-0000-0000', 1, '2018-01-11 17:49:32', '2018-01-11 17:49:32')[0m
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE `users` SET `sign_in_count` = 1, `current_sign_in_at` = '2018-01-11 17:49:32', `last_sign_in_at` = '2018-01-11 17:49:32', `current_sign_in_ip` = '127.0.0.1', `last_sign_in_ip` = '127.0.0.1' WHERE `users`.`id` = 1[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms (ActiveRecord: 18.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-12 02:49:32 +0900
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-28 00:00:00' AND '2018-01-11 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (18.7ms)
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (10.8ms)
+  Rendered stocks/index.html.haml within layouts/application (58.7ms)
+Completed 200 OK in 186ms (Views: 151.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/admins" for 127.0.0.1 at 2018-01-12 02:50:04 +0900
+Processing by AdminsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendering admins/index.html.haml within layouts/application
+  Rendered shared/_adminheader.html.haml (4.4ms)
+  Rendered shared/_leftsidebar.html.haml (5.7ms)
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` ORDER BY `orders`.`created_at` DESC LIMIT 10[0m
+  Rendered shared/_adminfooter.html.haml (1.8ms)
+  Rendered admins/index.html.haml within layouts/application (32.4ms)
+Completed 200 OK in 133ms (Views: 128.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-12 02:50:08 +0900
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-28 00:00:00' AND '2018-01-11 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (22.6ms)
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (9.5ms)
+  Rendered stocks/index.html.haml within layouts/application (65.6ms)
+Completed 200 OK in 187ms (Views: 177.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2018-01-12 02:51:48 +0900
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering users/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (20.9ms)
+  Rendered shared/_footer.html.haml (10.8ms)
+  Rendered users/index.html.haml within layouts/application (55.6ms)
+Completed 200 OK in 154ms (Views: 147.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/payments" for 127.0.0.1 at 2018-01-12 02:51:50 +0900
+Processing by UsersController#payments as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering users/payments.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (38.0ms)
+  Rendered shared/_footer.html.haml (13.0ms)
+  Rendered users/payments.html.haml within layouts/application (91.6ms)
+Completed 200 OK in 926ms (Views: 203.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/payments" for 127.0.0.1 at 2018-01-12 02:51:55 +0900
+Processing by UsersController#payments as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering users/payments.html.haml within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (21.2ms)
+  Rendered shared/_footer.html.haml (13.0ms)
+  Rendered users/payments.html.haml within layouts/application (65.2ms)
+Completed 200 OK in 706ms (Views: 181.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-12 02:52:02 +0900
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-28 00:00:00' AND '2018-01-11 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (22.0ms)
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (11.4ms)
+  Rendered stocks/index.html.haml within layouts/application (64.7ms)
+Completed 200 OK in 186ms (Views: 176.7ms | ActiveRecord: 1.5ms)
+
+
