@@ -4825,3 +4825,277 @@ Tasks: TOP => assets:precompile
   INFO [93daf4bd] Running /usr/bin/env echo "Branch master (at 603367933293889f2ba62d2c90be8aab74ae082c) deployed as release 20180116115849 by phantom" >> /var/www/0111deploytest_AW/revisions.log as ec2-user@13.230.13.70
  DEBUG [93daf4bd] Command: cd /var/www/0111deploytest_AW/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 603367933293889f2ba62d2c90be8aab74ae082c) deployed as release 20180116115849 by phantom" >> /var/www/0111deploytest_AW/revisions.log )
   INFO [93daf4bd] Finished in 0.147 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-01-16 21:29:18 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [2738cfdb] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@13.230.13.70
+ DEBUG [2738cfdb] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [2738cfdb] Finished in 0.311 seconds with exit status 0 (successful).
+  INFO [34d565b3] Running /usr/bin/env mkdir -p /tmp as ec2-user@13.230.13.70
+ DEBUG [34d565b3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [34d565b3] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-0111deploytest_AW-production-phantom.sh 0.0%
+  INFO Uploading /tmp/git-ssh-0111deploytest_AW-production-phantom.sh 100.0%
+  INFO [875e7e89] Running /usr/bin/env chmod 700 /tmp/git-ssh-0111deploytest_AW-production-phantom.sh as ec2-user@13.230.13.70
+ DEBUG [875e7e89] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-0111deploytest_AW-production-phantom.sh )
+  INFO [875e7e89] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [c84e9839] Running /usr/bin/env git ls-remote git@github.com:phantomspecial/0111deploytest_AW.git HEAD as ec2-user@13.230.13.70
+ DEBUG [c84e9839] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0111deploytest_AW-production-phantom.sh" ; /usr/bin/env git ls-remote git@github.com:phantomspecial/0111deploytest_AW.git HEAD )
+ DEBUG [c84e9839] 	d6fdfa5a2a839159a24667aed6238e943a1cbba0	HEAD
+  INFO [c84e9839] Finished in 1.956 seconds with exit status 0 (successful).
+  INFO [d161c7fd] Running /usr/bin/env mkdir -p /var/www/0111deploytest_AW/shared /var/www/0111deploytest_AW/releases as ec2-user@13.230.13.70
+ DEBUG [d161c7fd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/0111deploytest_AW/shared /var/www/0111deploytest_AW/releases )
+  INFO [d161c7fd] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [ccfe0994] Running /usr/bin/env mkdir -p /var/www/0111deploytest_AW/shared/log /var/www/0111deploytest_AW/shared/tmp/pids /var/www/0111deploytest_AW/shared/tmp/cache /var/www/0111deploytest_AW/shared/tmp/sockets /var/www/0111deploytest_AW/shared/vendor/bundle /var/www/0111deploytest_AW/shared/public/system /var/www/0111deploytest_AW/shared/public/uploads /var/www/0111deploytest_AW/shared/public/assets as ec2-user@13.230.13.70
+ DEBUG [ccfe0994] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/0111deploytest_AW/shared/log /var/www/0111deploytest_AW/shared/tmp/pids /var/www/0111deploytest_AW/shared/tmp/cache /var/www/0111deploytest_AW/shared/tmp/sockets /var/www/0111deploytest_AW/shared/vendor/bundle /var/www/0111deploytest_AW/shared/public/system /var/www/0111deploytest_AW/shared/public/uploads /var/www/0111deploytest_AW/shared/public/assets )
+  INFO [ccfe0994] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [0afba3e6] Running /usr/bin/env mkdir -p /var/www/0111deploytest_AW/shared/config as ec2-user@13.230.13.70
+ DEBUG [0afba3e6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/0111deploytest_AW/shared/config )
+  INFO [0afba3e6] Finished in 0.119 seconds with exit status 0 (successful).
+ DEBUG [3003d302] Running [ -f /var/www/0111deploytest_AW/shared/config/secrets.yml ] as ec2-user@13.230.13.70
+ DEBUG [3003d302] Command: [ -f /var/www/0111deploytest_AW/shared/config/secrets.yml ]
+ DEBUG [3003d302] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [ee582edd] Running [ -f /var/www/0111deploytest_AW/current/REVISION ] as ec2-user@13.230.13.70
+ DEBUG [ee582edd] Command: [ -f /var/www/0111deploytest_AW/current/REVISION ]
+ DEBUG [ee582edd] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [5420d0bf] Running /usr/bin/env cat /var/www/0111deploytest_AW/current/REVISION 2>/dev/null as ec2-user@13.230.13.70
+ DEBUG [5420d0bf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/0111deploytest_AW/current/REVISION 2>/dev/null )
+ DEBUG [5420d0bf] 	603367933293889f2ba62d2c90be8aab74ae082c
+ DEBUG [5420d0bf] Finished in 0.164 seconds with exit status 0 (successful).
+ DEBUG [2a680103] Running [ -f /var/www/0111deploytest_AW/repo/HEAD ] as ec2-user@13.230.13.70
+ DEBUG [2a680103] Command: [ -f /var/www/0111deploytest_AW/repo/HEAD ]
+ DEBUG [2a680103] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/0111deploytest_AW/repo
+ DEBUG [9249cf08] Running if test ! -d /var/www/0111deploytest_AW/repo; then echo "Directory does not exist '/var/www/0111deploytest_AW/repo'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [9249cf08] Command: if test ! -d /var/www/0111deploytest_AW/repo; then echo "Directory does not exist '/var/www/0111deploytest_AW/repo'" 1>&2; false; fi
+ DEBUG [9249cf08] Finished in 0.160 seconds with exit status 0 (successful).
+  INFO [9b6d89b7] Running /usr/bin/env git remote set-url origin git@github.com:phantomspecial/0111deploytest_AW.git as ec2-user@13.230.13.70
+ DEBUG [9b6d89b7] Command: cd /var/www/0111deploytest_AW/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0111deploytest_AW-production-phantom.sh" ; /usr/bin/env git remote set-url origin git@github.com:phantomspecial/0111deploytest_AW.git )
+  INFO [9b6d89b7] Finished in 0.169 seconds with exit status 0 (successful).
+  INFO [de773383] Running /usr/bin/env git remote update --prune as ec2-user@13.230.13.70
+ DEBUG [de773383] Command: cd /var/www/0111deploytest_AW/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0111deploytest_AW-production-phantom.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [de773383] 	Fetching origin
+ DEBUG [de773383] 	From github.com:phantomspecial/0111deploytest_AW
+   6033679..d6fdfa5  master     -> master
+  INFO [de773383] Finished in 2.055 seconds with exit status 0 (successful).
+ DEBUG [d326adac] Running if test ! -d /var/www/0111deploytest_AW/repo; then echo "Directory does not exist '/var/www/0111deploytest_AW/repo'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [d326adac] Command: if test ! -d /var/www/0111deploytest_AW/repo; then echo "Directory does not exist '/var/www/0111deploytest_AW/repo'" 1>&2; false; fi
+ DEBUG [d326adac] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [e0b0ea2c] Running /usr/bin/env mkdir -p /var/www/0111deploytest_AW/releases/20180116122922 as ec2-user@13.230.13.70
+ DEBUG [e0b0ea2c] Command: cd /var/www/0111deploytest_AW/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0111deploytest_AW-production-phantom.sh" ; /usr/bin/env mkdir -p /var/www/0111deploytest_AW/releases/20180116122922 )
+  INFO [e0b0ea2c] Finished in 0.161 seconds with exit status 0 (successful).
+  INFO [382975ba] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/0111deploytest_AW/releases/20180116122922 as ec2-user@13.230.13.70
+ DEBUG [382975ba] Command: cd /var/www/0111deploytest_AW/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0111deploytest_AW-production-phantom.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/0111deploytest_AW/releases/20180116122922 )
+  INFO [382975ba] Finished in 0.239 seconds with exit status 0 (successful).
+ DEBUG [418aca40] Running if test ! -d /var/www/0111deploytest_AW/repo; then echo "Directory does not exist '/var/www/0111deploytest_AW/repo'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [418aca40] Command: if test ! -d /var/www/0111deploytest_AW/repo; then echo "Directory does not exist '/var/www/0111deploytest_AW/repo'" 1>&2; false; fi
+ DEBUG [418aca40] Finished in 0.189 seconds with exit status 0 (successful).
+ DEBUG [cfead187] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@13.230.13.70
+ DEBUG [cfead187] Command: cd /var/www/0111deploytest_AW/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-0111deploytest_AW-production-phantom.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cfead187] 	d6fdfa5a2a839159a24667aed6238e943a1cbba0
+ DEBUG [cfead187] Finished in 0.193 seconds with exit status 0 (successful).
+ DEBUG [0e74543d] Running if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [0e74543d] Command: if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi
+ DEBUG [0e74543d] Finished in 0.125 seconds with exit status 0 (successful).
+  INFO [4c99d471] Running /usr/bin/env echo "d6fdfa5a2a839159a24667aed6238e943a1cbba0" >> REVISION as ec2-user@13.230.13.70
+ DEBUG [4c99d471] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "d6fdfa5a2a839159a24667aed6238e943a1cbba0" >> REVISION )
+  INFO [4c99d471] Finished in 0.180 seconds with exit status 0 (successful).
+  INFO [cd299ff5] Running /usr/bin/env mkdir -p /var/www/0111deploytest_AW/releases/20180116122922/config as ec2-user@13.230.13.70
+ DEBUG [cd299ff5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/0111deploytest_AW/releases/20180116122922/config )
+  INFO [cd299ff5] Finished in 0.169 seconds with exit status 0 (successful).
+ DEBUG [d8492bb4] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/config/secrets.yml ] as ec2-user@13.230.13.70
+ DEBUG [d8492bb4] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/config/secrets.yml ]
+ DEBUG [d8492bb4] Finished in 0.088 seconds with exit status 1 (failed).
+ DEBUG [ef1b6eda] Running [ -f /var/www/0111deploytest_AW/releases/20180116122922/config/secrets.yml ] as ec2-user@13.230.13.70
+ DEBUG [ef1b6eda] Command: [ -f /var/www/0111deploytest_AW/releases/20180116122922/config/secrets.yml ]
+ DEBUG [ef1b6eda] Finished in 0.123 seconds with exit status 1 (failed).
+  INFO [5b3ab80c] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/config/secrets.yml /var/www/0111deploytest_AW/releases/20180116122922/config/secrets.yml as ec2-user@13.230.13.70
+ DEBUG [5b3ab80c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/config/secrets.yml /var/www/0111deploytest_AW/releases/20180116122922/config/secrets.yml )
+  INFO [5b3ab80c] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [03be1321] Running /usr/bin/env mkdir -p /var/www/0111deploytest_AW/releases/20180116122922 /var/www/0111deploytest_AW/releases/20180116122922/tmp /var/www/0111deploytest_AW/releases/20180116122922/vendor /var/www/0111deploytest_AW/releases/20180116122922/public as ec2-user@13.230.13.70
+ DEBUG [03be1321] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/0111deploytest_AW/releases/20180116122922 /var/www/0111deploytest_AW/releases/20180116122922/tmp /var/www/0111deploytest_AW/releases/20180116122922/vendor /var/www/0111deploytest_AW/releases/20180116122922/public )
+  INFO [03be1321] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [7847aa6e] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/log ] as ec2-user@13.230.13.70
+ DEBUG [7847aa6e] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/log ]
+ DEBUG [7847aa6e] Finished in 0.078 seconds with exit status 1 (failed).
+ DEBUG [7d81604c] Running [ -d /var/www/0111deploytest_AW/releases/20180116122922/log ] as ec2-user@13.230.13.70
+ DEBUG [7d81604c] Command: [ -d /var/www/0111deploytest_AW/releases/20180116122922/log ]
+ DEBUG [7d81604c] Finished in 0.132 seconds with exit status 0 (successful).
+  INFO [4e85aad3] Running /usr/bin/env rm -rf /var/www/0111deploytest_AW/releases/20180116122922/log as ec2-user@13.230.13.70
+ DEBUG [4e85aad3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/0111deploytest_AW/releases/20180116122922/log )
+  INFO [4e85aad3] Finished in 0.085 seconds with exit status 0 (successful).
+  INFO [2765c501] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/log /var/www/0111deploytest_AW/releases/20180116122922/log as ec2-user@13.230.13.70
+ DEBUG [2765c501] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/log /var/www/0111deploytest_AW/releases/20180116122922/log )
+  INFO [2765c501] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [9cbb2f01] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/tmp/pids ] as ec2-user@13.230.13.70
+ DEBUG [9cbb2f01] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/tmp/pids ]
+ DEBUG [9cbb2f01] Finished in 0.076 seconds with exit status 1 (failed).
+ DEBUG [f7a7b150] Running [ -d /var/www/0111deploytest_AW/releases/20180116122922/tmp/pids ] as ec2-user@13.230.13.70
+ DEBUG [f7a7b150] Command: [ -d /var/www/0111deploytest_AW/releases/20180116122922/tmp/pids ]
+ DEBUG [f7a7b150] Finished in 0.133 seconds with exit status 1 (failed).
+  INFO [8352783c] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/tmp/pids /var/www/0111deploytest_AW/releases/20180116122922/tmp/pids as ec2-user@13.230.13.70
+ DEBUG [8352783c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/tmp/pids /var/www/0111deploytest_AW/releases/20180116122922/tmp/pids )
+  INFO [8352783c] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [183aa81b] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/tmp/cache ] as ec2-user@13.230.13.70
+ DEBUG [183aa81b] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/tmp/cache ]
+ DEBUG [183aa81b] Finished in 0.126 seconds with exit status 1 (failed).
+ DEBUG [5be2489e] Running [ -d /var/www/0111deploytest_AW/releases/20180116122922/tmp/cache ] as ec2-user@13.230.13.70
+ DEBUG [5be2489e] Command: [ -d /var/www/0111deploytest_AW/releases/20180116122922/tmp/cache ]
+ DEBUG [5be2489e] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [9c343ca1] Running /usr/bin/env rm -rf /var/www/0111deploytest_AW/releases/20180116122922/tmp/cache as ec2-user@13.230.13.70
+ DEBUG [9c343ca1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/0111deploytest_AW/releases/20180116122922/tmp/cache )
+  INFO [9c343ca1] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [f71b4368] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/tmp/cache /var/www/0111deploytest_AW/releases/20180116122922/tmp/cache as ec2-user@13.230.13.70
+ DEBUG [f71b4368] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/tmp/cache /var/www/0111deploytest_AW/releases/20180116122922/tmp/cache )
+  INFO [f71b4368] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [236b0dc6] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/tmp/sockets ] as ec2-user@13.230.13.70
+ DEBUG [236b0dc6] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/tmp/sockets ]
+ DEBUG [236b0dc6] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [568e1f0b] Running [ -d /var/www/0111deploytest_AW/releases/20180116122922/tmp/sockets ] as ec2-user@13.230.13.70
+ DEBUG [568e1f0b] Command: [ -d /var/www/0111deploytest_AW/releases/20180116122922/tmp/sockets ]
+ DEBUG [568e1f0b] Finished in 0.140 seconds with exit status 1 (failed).
+  INFO [d93641ea] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/tmp/sockets /var/www/0111deploytest_AW/releases/20180116122922/tmp/sockets as ec2-user@13.230.13.70
+ DEBUG [d93641ea] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/tmp/sockets /var/www/0111deploytest_AW/releases/20180116122922/tmp/sockets )
+  INFO [d93641ea] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [d2ef4d26] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/vendor/bundle ] as ec2-user@13.230.13.70
+ DEBUG [d2ef4d26] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/vendor/bundle ]
+ DEBUG [d2ef4d26] Finished in 0.110 seconds with exit status 1 (failed).
+ DEBUG [33ab1962] Running [ -d /var/www/0111deploytest_AW/releases/20180116122922/vendor/bundle ] as ec2-user@13.230.13.70
+ DEBUG [33ab1962] Command: [ -d /var/www/0111deploytest_AW/releases/20180116122922/vendor/bundle ]
+ DEBUG [33ab1962] Finished in 0.120 seconds with exit status 1 (failed).
+  INFO [a536ccaf] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/vendor/bundle /var/www/0111deploytest_AW/releases/20180116122922/vendor/bundle as ec2-user@13.230.13.70
+ DEBUG [a536ccaf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/vendor/bundle /var/www/0111deploytest_AW/releases/20180116122922/vendor/bundle )
+  INFO [a536ccaf] Finished in 0.306 seconds with exit status 0 (successful).
+ DEBUG [92ce32a6] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/public/system ] as ec2-user@13.230.13.70
+ DEBUG [92ce32a6] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/public/system ]
+ DEBUG [92ce32a6] Finished in 0.287 seconds with exit status 1 (failed).
+ DEBUG [a6e75589] Running [ -d /var/www/0111deploytest_AW/releases/20180116122922/public/system ] as ec2-user@13.230.13.70
+ DEBUG [a6e75589] Command: [ -d /var/www/0111deploytest_AW/releases/20180116122922/public/system ]
+ DEBUG [a6e75589] Finished in 0.314 seconds with exit status 1 (failed).
+  INFO [5889db07] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/public/system /var/www/0111deploytest_AW/releases/20180116122922/public/system as ec2-user@13.230.13.70
+ DEBUG [5889db07] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/public/system /var/www/0111deploytest_AW/releases/20180116122922/public/system )
+  INFO [5889db07] Finished in 0.252 seconds with exit status 0 (successful).
+ DEBUG [b967bb58] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/public/uploads ] as ec2-user@13.230.13.70
+ DEBUG [b967bb58] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/public/uploads ]
+ DEBUG [b967bb58] Finished in 0.303 seconds with exit status 1 (failed).
+ DEBUG [7c2c4666] Running [ -d /var/www/0111deploytest_AW/releases/20180116122922/public/uploads ] as ec2-user@13.230.13.70
+ DEBUG [7c2c4666] Command: [ -d /var/www/0111deploytest_AW/releases/20180116122922/public/uploads ]
+ DEBUG [7c2c4666] Finished in 0.238 seconds with exit status 1 (failed).
+  INFO [fe14ac39] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/public/uploads /var/www/0111deploytest_AW/releases/20180116122922/public/uploads as ec2-user@13.230.13.70
+ DEBUG [fe14ac39] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/public/uploads /var/www/0111deploytest_AW/releases/20180116122922/public/uploads )
+  INFO [fe14ac39] Finished in 0.297 seconds with exit status 0 (successful).
+ DEBUG [492ee770] Running [ -L /var/www/0111deploytest_AW/releases/20180116122922/public/assets ] as ec2-user@13.230.13.70
+ DEBUG [492ee770] Command: [ -L /var/www/0111deploytest_AW/releases/20180116122922/public/assets ]
+ DEBUG [492ee770] Finished in 0.211 seconds with exit status 1 (failed).
+ DEBUG [c5e762fe] Running [ -d /var/www/0111deploytest_AW/releases/20180116122922/public/assets ] as ec2-user@13.230.13.70
+ DEBUG [c5e762fe] Command: [ -d /var/www/0111deploytest_AW/releases/20180116122922/public/assets ]
+ DEBUG [c5e762fe] Finished in 0.279 seconds with exit status 0 (successful).
+  INFO [bbea2c10] Running /usr/bin/env rm -rf /var/www/0111deploytest_AW/releases/20180116122922/public/assets as ec2-user@13.230.13.70
+ DEBUG [bbea2c10] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/0111deploytest_AW/releases/20180116122922/public/assets )
+  INFO [bbea2c10] Finished in 0.135 seconds with exit status 0 (successful).
+  INFO [e86ffbc7] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/public/assets /var/www/0111deploytest_AW/releases/20180116122922/public/assets as ec2-user@13.230.13.70
+ DEBUG [e86ffbc7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/shared/public/assets /var/www/0111deploytest_AW/releases/20180116122922/public/assets )
+  INFO [e86ffbc7] Finished in 0.179 seconds with exit status 0 (successful).
+ DEBUG [24079364] Running if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [24079364] Command: if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi
+ DEBUG [24079364] Finished in 0.177 seconds with exit status 0 (successful).
+ DEBUG [ccc04d77] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/0111deploytest_AW/shared/bundle as ec2-user@13.230.13.70
+ DEBUG [ccc04d77] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/0111deploytest_AW/shared/bundle )
+ DEBUG [ccc04d77] 	The following gems are missing
+ DEBUG [ccc04d77] 	 * net-ssh (4.2.0)
+ DEBUG [ccc04d77] 	 * net-scp (1.2.1)
+ DEBUG [ccc04d77] 	 * sshkit (1.15.1)
+ DEBUG [ccc04d77] 	 * airbrussh (1.3.0)
+ DEBUG [ccc04d77] 	 * bindex (0.5.0)
+ DEBUG [ccc04d77] 	 * byebug (9.1.0)
+ DEBUG [ccc04d77] 	 * capistrano (3.10.1)
+ DEBUG [ccc04d77] 	 * capistrano-bundler (1.3.0)
+ DEBUG [ccc04d77] 	 * capistrano-rails (1.3.1)
+ DEBUG [ccc04d77] 	 * capistrano-rbenv (2.1.3)
+ DEBUG [ccc04d77] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [ccc04d77] 	 * coderay (1.1.2)
+ DEBUG [ccc04d77] 	 * listen (3.0.8)
+ DEBUG [ccc04d77] 	 * pry (0.11.3)
+ DEBUG [ccc04d77] 	 * pry-rails (0.3.6)
+ DEBUG [ccc04d77] 	 * spring (2.0.2)
+ DEBUG [ccc04d77] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [ccc04d77] 	 * web-console (3.5.1)
+ DEBUG [ccc04d77] 	Install missing gems with `bundle install`
+ DEBUG [ccc04d77] Finished in 0.684 seconds with exit status 1 (failed).
+  INFO [4e453d23] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/0111deploytest_AW/shared/bundle --without development test --deployment --quiet as ec2-user@13.230.13.70
+ DEBUG [4e453d23] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/0111deploytest_AW/shared/bundle --without development test --deployment --quiet )
+  INFO [4e453d23] Finished in 0.604 seconds with exit status 0 (successful).
+ DEBUG [9df4ba00] Running if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [9df4ba00] Command: if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi
+ DEBUG [9df4ba00] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO [ab782262] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@13.230.13.70
+ DEBUG [ab782262] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [ab782262] Finished in 3.406 seconds with exit status 0 (successful).
+ DEBUG [e402ae28] Running if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [e402ae28] Command: if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi
+ DEBUG [e402ae28] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [6a256192] Running /usr/bin/env mkdir -p /var/www/0111deploytest_AW/releases/20180116122922/assets_manifest_backup as ec2-user@13.230.13.70
+ DEBUG [6a256192] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/0111deploytest_AW/releases/20180116122922/assets_manifest_backup )
+  INFO [6a256192] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [d7daad12] Running /usr/bin/env ls /var/www/0111deploytest_AW/releases/20180116122922/public/assets/.sprockets-manifest* as ec2-user@13.230.13.70
+ DEBUG [d7daad12] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/0111deploytest_AW/releases/20180116122922/public/assets/.sprockets-manifest* )
+ DEBUG [d7daad12] 	/var/www/0111deploytest_AW/releases/20180116122922/public/assets/.sprockets-manifest-6a6a3507c04f378d98e50eb214cdff22.json
+ DEBUG [d7daad12] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [e5fa6b37] Running /usr/bin/env ls /var/www/0111deploytest_AW/releases/20180116122922/public/assets/.sprockets-manifest* as ec2-user@13.230.13.70
+ DEBUG [e5fa6b37] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/0111deploytest_AW/releases/20180116122922/public/assets/.sprockets-manifest* )
+ DEBUG [e5fa6b37] 	/var/www/0111deploytest_AW/releases/20180116122922/public/assets/.sprockets-manifest-6a6a3507c04f378d98e50eb214cdff22.json
+ DEBUG [e5fa6b37] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [58b34907] Running /usr/bin/env cp /var/www/0111deploytest_AW/releases/20180116122922/public/assets/.sprockets-manifest-6a6a3507c04f378d98e50eb214cdff22.json /var/www/0111deploytest_AW/releases/20180116122922/assets_manifest_backup as ec2-user@13.230.13.70
+ DEBUG [58b34907] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/0111deploytest_AW/releases/20180116122922/public/assets/.sprockets-manifest-6a6a3507c04f378d98e50eb214cdff22.json /var/www/0111deploytest_AW/releases/20180116122922/assets_manifest_backup )
+  INFO [58b34907] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [5c98c919] Running if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [5c98c919] Command: if test ! -d /var/www/0111deploytest_AW/releases/20180116122922; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases/20180116122922'" 1>&2; false; fi
+ DEBUG [5c98c919] Finished in 0.108 seconds with exit status 0 (successful).
+  INFO [1e701728] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@13.230.13.70
+ DEBUG [1e701728] Command: cd /var/www/0111deploytest_AW/releases/20180116122922 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [1e701728] Finished in 2.757 seconds with exit status 0 (successful).
+  INFO [2baefedd] Running /usr/bin/env ln -s /var/www/0111deploytest_AW/releases/20180116122922 /var/www/0111deploytest_AW/releases/current as ec2-user@13.230.13.70
+ DEBUG [2baefedd] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/0111deploytest_AW/releases/20180116122922 /var/www/0111deploytest_AW/releases/current )
+  INFO [2baefedd] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [b03a4155] Running /usr/bin/env mv /var/www/0111deploytest_AW/releases/current /var/www/0111deploytest_AW as ec2-user@13.230.13.70
+ DEBUG [b03a4155] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/0111deploytest_AW/releases/current /var/www/0111deploytest_AW )
+  INFO [b03a4155] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [46fd6150] Running if test ! -d /var/www/0111deploytest_AW/current; then echo "Directory does not exist '/var/www/0111deploytest_AW/current'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [46fd6150] Command: if test ! -d /var/www/0111deploytest_AW/current; then echo "Directory does not exist '/var/www/0111deploytest_AW/current'" 1>&2; false; fi
+ DEBUG [46fd6150] Finished in 0.103 seconds with exit status 0 (successful).
+ DEBUG [1cb8eccf] Running [ -e /var/www/0111deploytest_AW/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/0111deploytest_AW/shared/tmp/pids/unicorn.pid` as ec2-user@13.230.13.70
+ DEBUG [1cb8eccf] Command: [ -e /var/www/0111deploytest_AW/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/0111deploytest_AW/shared/tmp/pids/unicorn.pid`
+ DEBUG [1cb8eccf] Finished in 0.096 seconds with exit status 1 (failed).
+  INFO [2e71d3ab] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/0111deploytest_AW/current/config/unicorn.rb -E deployment -D  as ec2-user@13.230.13.70
+ DEBUG [2e71d3ab] Command: cd /var/www/0111deploytest_AW/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/0111deploytest_AW/current/config/unicorn.rb -E deployment -D  )
+  INFO [2e71d3ab] Finished in 3.077 seconds with exit status 0 (successful).
+ DEBUG [da369bfb] Running if test ! -d /var/www/0111deploytest_AW/current; then echo "Directory does not exist '/var/www/0111deploytest_AW/current'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [da369bfb] Command: if test ! -d /var/www/0111deploytest_AW/current; then echo "Directory does not exist '/var/www/0111deploytest_AW/current'" 1>&2; false; fi
+ DEBUG [da369bfb] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [740e4c61] Running /usr/bin/env kill -s USR2 `cat /var/www/0111deploytest_AW/shared/tmp/pids/unicorn.pid` as ec2-user@13.230.13.70
+ DEBUG [740e4c61] Command: cd /var/www/0111deploytest_AW/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/0111deploytest_AW/shared/tmp/pids/unicorn.pid` )
+  INFO [740e4c61] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [a374a85c] Running /usr/bin/env ls -x /var/www/0111deploytest_AW/releases as ec2-user@13.230.13.70
+ DEBUG [a374a85c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/0111deploytest_AW/releases )
+ DEBUG [a374a85c] 	20180116104515	20180116105016	20180116105231	20180116114156	20180116115849
+20180116122922
+ DEBUG [a374a85c] Finished in 0.149 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 13.230.13.70
+ DEBUG [277f9d40] Running [ -d /var/www/0111deploytest_AW/current ] as ec2-user@13.230.13.70
+ DEBUG [277f9d40] Command: [ -d /var/www/0111deploytest_AW/current ]
+ DEBUG [277f9d40] Finished in 0.326 seconds with exit status 0 (successful).
+ DEBUG [d6d37b23] Running /usr/bin/env readlink /var/www/0111deploytest_AW/current as ec2-user@13.230.13.70
+ DEBUG [d6d37b23] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env readlink /var/www/0111deploytest_AW/current )
+ DEBUG [d6d37b23] 	/var/www/0111deploytest_AW/releases/20180116122922
+ DEBUG [d6d37b23] Finished in 0.286 seconds with exit status 0 (successful).
+  INFO [de25920d] Running /usr/bin/env rm -rf /var/www/0111deploytest_AW/releases/20180116104515 as ec2-user@13.230.13.70
+ DEBUG [de25920d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/0111deploytest_AW/releases/20180116104515 )
+  INFO [de25920d] Finished in 0.435 seconds with exit status 0 (successful).
+ DEBUG [59264743] Running if test ! -d /var/www/0111deploytest_AW/releases; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [59264743] Command: if test ! -d /var/www/0111deploytest_AW/releases; then echo "Directory does not exist '/var/www/0111deploytest_AW/releases'" 1>&2; false; fi
+ DEBUG [59264743] Finished in 0.367 seconds with exit status 0 (successful).
+  INFO [3b7f2fdf] Running /usr/bin/env echo "Branch master (at d6fdfa5a2a839159a24667aed6238e943a1cbba0) deployed as release 20180116122922 by phantom" >> /var/www/0111deploytest_AW/revisions.log as ec2-user@13.230.13.70
+ DEBUG [3b7f2fdf] Command: cd /var/www/0111deploytest_AW/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at d6fdfa5a2a839159a24667aed6238e943a1cbba0) deployed as release 20180116122922 by phantom" >> /var/www/0111deploytest_AW/revisions.log )
+  INFO [3b7f2fdf] Finished in 0.458 seconds with exit status 0 (successful).
