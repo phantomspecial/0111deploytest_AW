@@ -25,7 +25,7 @@ class ApplicationController < ActionController::Base
   # include ErrorHandlers if Rails.env.production? or Rails.env.staging?
 
 
-  # pay.jpのapi_keyの設定
+  # pay.jpのapi_keyの設定(秘密鍵)
   Payjp.api_key = ENV['PAYJP_SECRET_KEY']
 
   # 顧客-クレジットカード情報
