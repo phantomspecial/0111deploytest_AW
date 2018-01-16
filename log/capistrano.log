@@ -1108,3 +1108,408 @@ Tasks: TOP => assets:precompile
   INFO [fd84b435] Running /usr/bin/env echo "Branch master (at cdff55af4809b5bb1ed65dbf0e020f9b2e86f6fb) deployed as release 20180116084145 by phantom" >> /var/www/0111deploytest_AW/revisions.log as ec2-user@13.230.13.70
  DEBUG [fd84b435] Command: cd /var/www/0111deploytest_AW/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at cdff55af4809b5bb1ed65dbf0e020f9b2e86f6fb) deployed as release 20180116084145 by phantom" >> /var/www/0111deploytest_AW/revisions.log )
   INFO [fd84b435] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-01-16 18:09:14 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ad6cc77d] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@13.230.13.70
+ DEBUG [ad6cc77d] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [ad6cc77d] Finished in 0.300 seconds with exit status 0 (successful).
+  INFO [a975d460] Running /usr/bin/env mkdir -p /tmp as ec2-user@13.230.13.70
+ DEBUG [a975d460] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [a975d460] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-AmazonWeb-production-phantom.sh 0.0%
+  INFO Uploading /tmp/git-ssh-AmazonWeb-production-phantom.sh 100.0%
+  INFO [b25212ba] Running /usr/bin/env chmod 700 /tmp/git-ssh-AmazonWeb-production-phantom.sh as ec2-user@13.230.13.70
+ DEBUG [b25212ba] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-AmazonWeb-production-phantom.sh )
+  INFO [b25212ba] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [cc6f15c8] Running /usr/bin/env git ls-remote git@github.com:phantomspecial/0111deploytest_AW.git HEAD as ec2-user@13.230.13.70
+ DEBUG [cc6f15c8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-AmazonWeb-production-phantom.sh" ; /usr/bin/env git ls-remote git@github.com:phantomspecial/0111deploytest_AW.git HEAD )
+ DEBUG [cc6f15c8] 	6737dac164922f95fdc2fbf2315b81a246049a97	HEAD
+  INFO [cc6f15c8] Finished in 1.717 seconds with exit status 0 (successful).
+  INFO [1484c279] Running /usr/bin/env mkdir -p /var/www/AmazonWeb/shared /var/www/AmazonWeb/releases as ec2-user@13.230.13.70
+ DEBUG [1484c279] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/AmazonWeb/shared /var/www/AmazonWeb/releases )
+  INFO [1484c279] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [097208c4] Running /usr/bin/env mkdir -p /var/www/AmazonWeb/shared/log /var/www/AmazonWeb/shared/tmp/pids /var/www/AmazonWeb/shared/tmp/cache /var/www/AmazonWeb/shared/tmp/sockets /var/www/AmazonWeb/shared/vendor/bundle /var/www/AmazonWeb/shared/public/system /var/www/AmazonWeb/shared/public/uploads /var/www/AmazonWeb/shared/public/assets as ec2-user@13.230.13.70
+ DEBUG [097208c4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/AmazonWeb/shared/log /var/www/AmazonWeb/shared/tmp/pids /var/www/AmazonWeb/shared/tmp/cache /var/www/AmazonWeb/shared/tmp/sockets /var/www/AmazonWeb/shared/vendor/bundle /var/www/AmazonWeb/shared/public/system /var/www/AmazonWeb/shared/public/uploads /var/www/AmazonWeb/shared/public/assets )
+  INFO [097208c4] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG [4ad3393e] Running [ -f /var/www/AmazonWeb/current/REVISION ] as ec2-user@13.230.13.70
+ DEBUG [4ad3393e] Command: [ -f /var/www/AmazonWeb/current/REVISION ]
+ DEBUG [4ad3393e] Finished in 0.078 seconds with exit status 1 (failed).
+ DEBUG [3218b546] Running [ -f /var/www/AmazonWeb/repo/HEAD ] as ec2-user@13.230.13.70
+ DEBUG [3218b546] Command: [ -f /var/www/AmazonWeb/repo/HEAD ]
+ DEBUG [3218b546] Finished in 0.076 seconds with exit status 1 (failed).
+ DEBUG [3d9f5890] Running if test ! -d /var/www/AmazonWeb; then echo "Directory does not exist '/var/www/AmazonWeb'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [3d9f5890] Command: if test ! -d /var/www/AmazonWeb; then echo "Directory does not exist '/var/www/AmazonWeb'" 1>&2; false; fi
+ DEBUG [3d9f5890] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [79f96753] Running /usr/bin/env git clone --mirror git@github.com:phantomspecial/0111deploytest_AW.git /var/www/AmazonWeb/repo as ec2-user@13.230.13.70
+ DEBUG [79f96753] Command: cd /var/www/AmazonWeb && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-AmazonWeb-production-phantom.sh" ; /usr/bin/env git clone --mirror git@github.com:phantomspecial/0111deploytest_AW.git /var/www/AmazonWeb/repo )
+ DEBUG [79f96753] 	Cloning into bare repository '/var/www/AmazonWeb/repo'...
+  INFO [79f96753] Finished in 3.081 seconds with exit status 0 (successful).
+ DEBUG [c8ac3ce9] Running if test ! -d /var/www/AmazonWeb/repo; then echo "Directory does not exist '/var/www/AmazonWeb/repo'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [c8ac3ce9] Command: if test ! -d /var/www/AmazonWeb/repo; then echo "Directory does not exist '/var/www/AmazonWeb/repo'" 1>&2; false; fi
+ DEBUG [c8ac3ce9] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [beba66ca] Running /usr/bin/env git remote set-url origin git@github.com:phantomspecial/0111deploytest_AW.git as ec2-user@13.230.13.70
+ DEBUG [beba66ca] Command: cd /var/www/AmazonWeb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-AmazonWeb-production-phantom.sh" ; /usr/bin/env git remote set-url origin git@github.com:phantomspecial/0111deploytest_AW.git )
+  INFO [beba66ca] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [7d9e066d] Running /usr/bin/env git remote update --prune as ec2-user@13.230.13.70
+ DEBUG [7d9e066d] Command: cd /var/www/AmazonWeb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-AmazonWeb-production-phantom.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [7d9e066d] 	Fetching origin
+  INFO [7d9e066d] Finished in 1.903 seconds with exit status 0 (successful).
+ DEBUG [4c0c2c00] Running if test ! -d /var/www/AmazonWeb/repo; then echo "Directory does not exist '/var/www/AmazonWeb/repo'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [4c0c2c00] Command: if test ! -d /var/www/AmazonWeb/repo; then echo "Directory does not exist '/var/www/AmazonWeb/repo'" 1>&2; false; fi
+ DEBUG [4c0c2c00] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO [118eaa6e] Running /usr/bin/env mkdir -p /var/www/AmazonWeb/releases/20180116090916 as ec2-user@13.230.13.70
+ DEBUG [118eaa6e] Command: cd /var/www/AmazonWeb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-AmazonWeb-production-phantom.sh" ; /usr/bin/env mkdir -p /var/www/AmazonWeb/releases/20180116090916 )
+  INFO [118eaa6e] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [0d485208] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/AmazonWeb/releases/20180116090916 as ec2-user@13.230.13.70
+ DEBUG [0d485208] Command: cd /var/www/AmazonWeb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-AmazonWeb-production-phantom.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/AmazonWeb/releases/20180116090916 )
+  INFO [0d485208] Finished in 0.153 seconds with exit status 0 (successful).
+ DEBUG [df875e50] Running if test ! -d /var/www/AmazonWeb/repo; then echo "Directory does not exist '/var/www/AmazonWeb/repo'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [df875e50] Command: if test ! -d /var/www/AmazonWeb/repo; then echo "Directory does not exist '/var/www/AmazonWeb/repo'" 1>&2; false; fi
+ DEBUG [df875e50] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [c3a62230] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@13.230.13.70
+ DEBUG [c3a62230] Command: cd /var/www/AmazonWeb/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-AmazonWeb-production-phantom.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [c3a62230] 	6737dac164922f95fdc2fbf2315b81a246049a97
+ DEBUG [c3a62230] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [cf15ca01] Running if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [cf15ca01] Command: if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi
+ DEBUG [cf15ca01] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [7abc4735] Running /usr/bin/env echo "6737dac164922f95fdc2fbf2315b81a246049a97" >> REVISION as ec2-user@13.230.13.70
+ DEBUG [7abc4735] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "6737dac164922f95fdc2fbf2315b81a246049a97" >> REVISION )
+  INFO [7abc4735] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [acd48b7e] Running /usr/bin/env mkdir -p /var/www/AmazonWeb/releases/20180116090916 /var/www/AmazonWeb/releases/20180116090916/tmp /var/www/AmazonWeb/releases/20180116090916/vendor /var/www/AmazonWeb/releases/20180116090916/public as ec2-user@13.230.13.70
+ DEBUG [acd48b7e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/AmazonWeb/releases/20180116090916 /var/www/AmazonWeb/releases/20180116090916/tmp /var/www/AmazonWeb/releases/20180116090916/vendor /var/www/AmazonWeb/releases/20180116090916/public )
+  INFO [acd48b7e] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [7041b60b] Running [ -L /var/www/AmazonWeb/releases/20180116090916/log ] as ec2-user@13.230.13.70
+ DEBUG [7041b60b] Command: [ -L /var/www/AmazonWeb/releases/20180116090916/log ]
+ DEBUG [7041b60b] Finished in 0.077 seconds with exit status 1 (failed).
+ DEBUG [2309f9a4] Running [ -d /var/www/AmazonWeb/releases/20180116090916/log ] as ec2-user@13.230.13.70
+ DEBUG [2309f9a4] Command: [ -d /var/www/AmazonWeb/releases/20180116090916/log ]
+ DEBUG [2309f9a4] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [85e96738] Running /usr/bin/env rm -rf /var/www/AmazonWeb/releases/20180116090916/log as ec2-user@13.230.13.70
+ DEBUG [85e96738] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/AmazonWeb/releases/20180116090916/log )
+  INFO [85e96738] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [45cc8381] Running /usr/bin/env ln -s /var/www/AmazonWeb/shared/log /var/www/AmazonWeb/releases/20180116090916/log as ec2-user@13.230.13.70
+ DEBUG [45cc8381] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/shared/log /var/www/AmazonWeb/releases/20180116090916/log )
+  INFO [45cc8381] Finished in 0.097 seconds with exit status 0 (successful).
+ DEBUG [c67d49cd] Running [ -L /var/www/AmazonWeb/releases/20180116090916/tmp/pids ] as ec2-user@13.230.13.70
+ DEBUG [c67d49cd] Command: [ -L /var/www/AmazonWeb/releases/20180116090916/tmp/pids ]
+ DEBUG [c67d49cd] Finished in 0.091 seconds with exit status 1 (failed).
+ DEBUG [949998ba] Running [ -d /var/www/AmazonWeb/releases/20180116090916/tmp/pids ] as ec2-user@13.230.13.70
+ DEBUG [949998ba] Command: [ -d /var/www/AmazonWeb/releases/20180116090916/tmp/pids ]
+ DEBUG [949998ba] Finished in 0.099 seconds with exit status 1 (failed).
+  INFO [ab7ddfae] Running /usr/bin/env ln -s /var/www/AmazonWeb/shared/tmp/pids /var/www/AmazonWeb/releases/20180116090916/tmp/pids as ec2-user@13.230.13.70
+ DEBUG [ab7ddfae] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/shared/tmp/pids /var/www/AmazonWeb/releases/20180116090916/tmp/pids )
+  INFO [ab7ddfae] Finished in 0.100 seconds with exit status 0 (successful).
+ DEBUG [b3ea654a] Running [ -L /var/www/AmazonWeb/releases/20180116090916/tmp/cache ] as ec2-user@13.230.13.70
+ DEBUG [b3ea654a] Command: [ -L /var/www/AmazonWeb/releases/20180116090916/tmp/cache ]
+ DEBUG [b3ea654a] Finished in 0.087 seconds with exit status 1 (failed).
+ DEBUG [e3438d44] Running [ -d /var/www/AmazonWeb/releases/20180116090916/tmp/cache ] as ec2-user@13.230.13.70
+ DEBUG [e3438d44] Command: [ -d /var/www/AmazonWeb/releases/20180116090916/tmp/cache ]
+ DEBUG [e3438d44] Finished in 0.090 seconds with exit status 0 (successful).
+  INFO [c8fa129e] Running /usr/bin/env rm -rf /var/www/AmazonWeb/releases/20180116090916/tmp/cache as ec2-user@13.230.13.70
+ DEBUG [c8fa129e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/AmazonWeb/releases/20180116090916/tmp/cache )
+  INFO [c8fa129e] Finished in 0.112 seconds with exit status 0 (successful).
+  INFO [70be24d2] Running /usr/bin/env ln -s /var/www/AmazonWeb/shared/tmp/cache /var/www/AmazonWeb/releases/20180116090916/tmp/cache as ec2-user@13.230.13.70
+ DEBUG [70be24d2] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/shared/tmp/cache /var/www/AmazonWeb/releases/20180116090916/tmp/cache )
+  INFO [70be24d2] Finished in 0.273 seconds with exit status 0 (successful).
+ DEBUG [de4fd189] Running [ -L /var/www/AmazonWeb/releases/20180116090916/tmp/sockets ] as ec2-user@13.230.13.70
+ DEBUG [de4fd189] Command: [ -L /var/www/AmazonWeb/releases/20180116090916/tmp/sockets ]
+ DEBUG [de4fd189] Finished in 0.313 seconds with exit status 1 (failed).
+ DEBUG [6bc4328b] Running [ -d /var/www/AmazonWeb/releases/20180116090916/tmp/sockets ] as ec2-user@13.230.13.70
+ DEBUG [6bc4328b] Command: [ -d /var/www/AmazonWeb/releases/20180116090916/tmp/sockets ]
+ DEBUG [6bc4328b] Finished in 0.310 seconds with exit status 1 (failed).
+  INFO [276a3958] Running /usr/bin/env ln -s /var/www/AmazonWeb/shared/tmp/sockets /var/www/AmazonWeb/releases/20180116090916/tmp/sockets as ec2-user@13.230.13.70
+ DEBUG [276a3958] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/shared/tmp/sockets /var/www/AmazonWeb/releases/20180116090916/tmp/sockets )
+  INFO [276a3958] Finished in 0.220 seconds with exit status 0 (successful).
+ DEBUG [58a3672f] Running [ -L /var/www/AmazonWeb/releases/20180116090916/vendor/bundle ] as ec2-user@13.230.13.70
+ DEBUG [58a3672f] Command: [ -L /var/www/AmazonWeb/releases/20180116090916/vendor/bundle ]
+ DEBUG [58a3672f] Finished in 0.166 seconds with exit status 1 (failed).
+ DEBUG [58d97f04] Running [ -d /var/www/AmazonWeb/releases/20180116090916/vendor/bundle ] as ec2-user@13.230.13.70
+ DEBUG [58d97f04] Command: [ -d /var/www/AmazonWeb/releases/20180116090916/vendor/bundle ]
+ DEBUG [58d97f04] Finished in 0.193 seconds with exit status 1 (failed).
+  INFO [ad585b26] Running /usr/bin/env ln -s /var/www/AmazonWeb/shared/vendor/bundle /var/www/AmazonWeb/releases/20180116090916/vendor/bundle as ec2-user@13.230.13.70
+ DEBUG [ad585b26] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/shared/vendor/bundle /var/www/AmazonWeb/releases/20180116090916/vendor/bundle )
+  INFO [ad585b26] Finished in 0.241 seconds with exit status 0 (successful).
+ DEBUG [257faa7c] Running [ -L /var/www/AmazonWeb/releases/20180116090916/public/system ] as ec2-user@13.230.13.70
+ DEBUG [257faa7c] Command: [ -L /var/www/AmazonWeb/releases/20180116090916/public/system ]
+ DEBUG [257faa7c] Finished in 0.128 seconds with exit status 1 (failed).
+ DEBUG [73f86f82] Running [ -d /var/www/AmazonWeb/releases/20180116090916/public/system ] as ec2-user@13.230.13.70
+ DEBUG [73f86f82] Command: [ -d /var/www/AmazonWeb/releases/20180116090916/public/system ]
+ DEBUG [73f86f82] Finished in 0.190 seconds with exit status 1 (failed).
+  INFO [a3d81d4f] Running /usr/bin/env ln -s /var/www/AmazonWeb/shared/public/system /var/www/AmazonWeb/releases/20180116090916/public/system as ec2-user@13.230.13.70
+ DEBUG [a3d81d4f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/shared/public/system /var/www/AmazonWeb/releases/20180116090916/public/system )
+  INFO [a3d81d4f] Finished in 0.428 seconds with exit status 0 (successful).
+ DEBUG [94c58a03] Running [ -L /var/www/AmazonWeb/releases/20180116090916/public/uploads ] as ec2-user@13.230.13.70
+ DEBUG [94c58a03] Command: [ -L /var/www/AmazonWeb/releases/20180116090916/public/uploads ]
+ DEBUG [94c58a03] Finished in 0.185 seconds with exit status 1 (failed).
+ DEBUG [9bcd3573] Running [ -d /var/www/AmazonWeb/releases/20180116090916/public/uploads ] as ec2-user@13.230.13.70
+ DEBUG [9bcd3573] Command: [ -d /var/www/AmazonWeb/releases/20180116090916/public/uploads ]
+ DEBUG [9bcd3573] Finished in 0.168 seconds with exit status 1 (failed).
+  INFO [361b8338] Running /usr/bin/env ln -s /var/www/AmazonWeb/shared/public/uploads /var/www/AmazonWeb/releases/20180116090916/public/uploads as ec2-user@13.230.13.70
+ DEBUG [361b8338] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/shared/public/uploads /var/www/AmazonWeb/releases/20180116090916/public/uploads )
+  INFO [361b8338] Finished in 0.188 seconds with exit status 0 (successful).
+ DEBUG [258e075f] Running [ -L /var/www/AmazonWeb/releases/20180116090916/public/assets ] as ec2-user@13.230.13.70
+ DEBUG [258e075f] Command: [ -L /var/www/AmazonWeb/releases/20180116090916/public/assets ]
+ DEBUG [258e075f] Finished in 0.117 seconds with exit status 1 (failed).
+ DEBUG [61c08c51] Running [ -d /var/www/AmazonWeb/releases/20180116090916/public/assets ] as ec2-user@13.230.13.70
+ DEBUG [61c08c51] Command: [ -d /var/www/AmazonWeb/releases/20180116090916/public/assets ]
+ DEBUG [61c08c51] Finished in 0.185 seconds with exit status 0 (successful).
+  INFO [5d19e286] Running /usr/bin/env rm -rf /var/www/AmazonWeb/releases/20180116090916/public/assets as ec2-user@13.230.13.70
+ DEBUG [5d19e286] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/AmazonWeb/releases/20180116090916/public/assets )
+  INFO [5d19e286] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [c80e7194] Running /usr/bin/env ln -s /var/www/AmazonWeb/shared/public/assets /var/www/AmazonWeb/releases/20180116090916/public/assets as ec2-user@13.230.13.70
+ DEBUG [c80e7194] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/shared/public/assets /var/www/AmazonWeb/releases/20180116090916/public/assets )
+  INFO [c80e7194] Finished in 0.192 seconds with exit status 0 (successful).
+ DEBUG [9919b6d3] Running if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [9919b6d3] Command: if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi
+ DEBUG [9919b6d3] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [e1e468d7] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/AmazonWeb/shared/bundle as ec2-user@13.230.13.70
+ DEBUG [e1e468d7] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/AmazonWeb/shared/bundle )
+ DEBUG [e1e468d7] 	The following gems are missing
+ DEBUG [e1e468d7] 	 * rake (12.3.0)
+ DEBUG [e1e468d7] 	 * concurrent-ruby (1.0.5)
+ DEBUG [e1e468d7] 	 * i18n (0.9.1)
+ DEBUG [e1e468d7] 	 * minitest (5.10.3)
+ DEBUG [e1e468d7] 	 * thread_safe (0.3.6)
+ DEBUG [e1e468d7] 	 * tzinfo (1.2.4)
+ DEBUG [e1e468d7] 	 * activesupport (5.0.6)
+ DEBUG [e1e468d7] 	 * builder (3.2.3)
+ DEBUG [e1e468d7] 	 * erubis (2.7.0)
+ DEBUG [e1e468d7] 	 * mini_portile2 (2.3.0)
+ DEBUG [e1e468d7] 	 * nokogiri (1.8.1)
+ DEBUG [e1e468d7] 	 * rails-dom-testing (2.0.3)
+ DEBUG [e1e468d7] 	 * crass (1.0.3)
+ DEBUG [e1e468d7] 	 * loofah (2.1.1)
+ DEBUG [e1e468d7] 	 * rails-html-sanitizer (1.0.3)
+ DEBUG [e1e468d7] 	 * actionview (5.0.6)
+ DEBUG [e1e468d7] 	 * rack (2.0.3)
+ DEBUG [e1e468d7] 	 * rack-test (0.6.3)
+ DEBUG [e1e468d7] 	 * actionpack (5.0.6)
+ DEBUG [e1e468d7] 	 * nio4r (2.1.0)
+ DEBUG [e1e468d7] 	 * websocket-extensions (0.1.3)
+ DEBUG [e1e468d7] 	 * websocket-driver (0.6.5)
+ DEBUG [e1e468d7] 	 * actioncable (5.0.6)
+ DEBUG [e1e468d7] 	 * globalid (0.4.1)
+ DEBUG [e1e468d7] 	 * activejob (5.0.6)
+ DEBUG [e1e468d7] 	 * mini_mime (1.0.0)
+ DEBUG [e1e468d7] 	 * mail (2.7.0)
+ DEBUG [e1e468d7] 	 * actionmailer (5.0.6)
+ DEBUG [e1e468d7] 	 * activemodel (5.0.6)
+ DEBUG [e1e468d7] 	 * arel (7.1.4)
+ DEBUG [e1e468d7] 	 * activerecord (5.0.6)
+ DEBUG [e1e468d7] 	 * net-ssh (4.2.0)
+ DEBUG [e1e468d7] 	 * net-scp (1.2.1)
+ DEBUG [e1e468d7] 	 * sshkit (1.15.1)
+ DEBUG [e1e468d7] 	 * airbrussh (1.3.0)
+ DEBUG [e1e468d7] 	 * bcrypt (3.1.11)
+ DEBUG [e1e468d7] 	 * bindex (0.5.0)
+ DEBUG [e1e468d7] 	 * byebug (9.1.0)
+ DEBUG [e1e468d7] 	 * capistrano (3.10.1)
+ DEBUG [e1e468d7] 	 * capistrano-bundler (1.3.0)
+ DEBUG [e1e468d7] 	 * capistrano-rails (1.3.1)
+ DEBUG [e1e468d7] 	 * capistrano-rbenv (2.1.3)
+ DEBUG [e1e468d7] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [e1e468d7] 	 * mime-types-data (3.2016.0521)
+ DEBUG [e1e468d7] 	 * mime-types (3.1)
+ DEBUG [e1e468d7] 	 * carrierwave (1.2.1)
+ DEBUG [e1e468d7] 	 * coderay (1.1.2)
+ DEBUG [e1e468d7] 	 * coffee-script-source (1.12.2)
+ DEBUG [e1e468d7] 	 * execjs (2.7.0)
+ DEBUG [e1e468d7] 	 * coffee-script (2.4.1)
+ DEBUG [e1e468d7] 	 * method_source (0.9.0)
+ DEBUG [e1e468d7] 	 * thor (0.20.0)
+ DEBUG [e1e468d7] 	 * railties (5.0.6)
+ DEBUG [e1e468d7] 	 * coffee-rails (4.2.2)
+ DEBUG [e1e468d7] 	 * orm_adapter (0.5.0)
+ DEBUG [e1e468d7] 	 * responders (2.4.0)
+ DEBUG [e1e468d7] 	 * warden (1.2.7)
+ DEBUG [e1e468d7] 	 * devise (4.3.0)
+ DEBUG [e1e468d7] 	 * unf_ext (0.0.7.4)
+ DEBUG [e1e468d7] 	 * unf (0.1.4)
+ DEBUG [e1e468d7] 	 * domain_name (0.5.20170404)
+ DEBUG [e1e468d7] 	 * temple (0.8.0)
+ DEBUG [e1e468d7] 	 * tilt (2.0.8)
+ DEBUG [e1e468d7] 	 * haml (5.0.4)
+ DEBUG [e1e468d7] 	 * sexp_processor (4.10.0)
+ DEBUG [e1e468d7] 	 * ruby_parser (3.10.1)
+ DEBUG [e1e468d7] 	 * html2haml (2.2.0)
+ DEBUG [e1e468d7] 	 * erb2haml (0.1.5)
+ DEBUG [e1e468d7] 	 * ffi (1.9.18)
+ DEBUG [e1e468d7] 	 * font-awesome-rails (4.7.0.2)
+ DEBUG [e1e468d7] 	 * haml-rails (1.0.0)
+ DEBUG [e1e468d7] 	 * http-cookie (1.0.3)
+ DEBUG [e1e468d7] 	 * multi_json (1.12.2)
+ DEBUG [e1e468d7] 	 * jbuilder (2.7.0)
+ DEBUG [e1e468d7] 	 * jquery-rails (4.3.1)
+ DEBUG [e1e468d7] 	 * jquery-ui-rails (5.0.5)
+ DEBUG [e1e468d7] 	 * kaminari-core (1.1.1)
+ DEBUG [e1e468d7] 	 * kaminari-actionview (1.1.1)
+ DEBUG [e1e468d7] 	 * kaminari-activerecord (1.1.1)
+ DEBUG [e1e468d7] 	 * kaminari (1.1.1)
+ DEBUG [e1e468d7] 	 * kgio (2.11.1)
+ DEBUG [e1e468d7] 	 * rb-fsevent (0.10.2)
+ DEBUG [e1e468d7] 	 * rb-inotify (0.9.10)
+ DEBUG [e1e468d7] 	 * listen (3.0.8)
+ DEBUG [e1e468d7] 	 * mini_magick (4.8.0)
+ DEBUG [e1e468d7] 	 * mysql2 (0.4.10)
+ DEBUG [e1e468d7] 	 * netrc (0.11.0)
+ DEBUG [e1e468d7] 	 * rest-client (2.0.2)
+ DEBUG [e1e468d7] 	 * payjp (0.0.6)
+ DEBUG [e1e468d7] 	 * pry (0.11.3)
+ DEBUG [e1e468d7] 	 * pry-rails (0.3.6)
+ DEBUG [e1e468d7] 	 * puma (3.11.0)
+ DEBUG [e1e468d7] 	 * sprockets (3.7.1)
+ DEBUG [e1e468d7] 	 * sprockets-rails (3.2.1)
+ DEBUG [e1e468d7] 	 * rails (5.0.6)
+ DEBUG [e1e468d7] 	 * raindrops (0.19.0)
+ DEBUG [e1e468d7] 	 * rubyzip (1.2.1)
+ DEBUG [e1e468d7] 	 * roo (2.7.1)
+ DEBUG [e1e468d7] 	 * sass-listen (4.0.0)
+ DEBUG [e1e468d7] 	 * sass (3.5.4)
+ DEBUG [e1e468d7] 	 * sass-rails (5.0.7)
+ DEBUG [e1e468d7] 	 * spring (2.0.2)
+ DEBUG [e1e468d7] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [e1e468d7] 	 * turbolinks-source (5.1.0)
+ DEBUG [e1e468d7] 	 * turbolinks (5.1.0)
+ DEBUG [e1e468d7] 	 * uglifier (4.0.2)
+ DEBUG [e1e468d7] 	 * unicorn (5.4.0)
+ DEBUG [e1e468d7] 	 * web-console (3.5.1)
+ DEBUG [e1e468d7] 	Install missing gems with `bundle install`
+ DEBUG [e1e468d7] Finished in 0.299 seconds with exit status 1 (failed).
+  INFO [f5a4033f] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/AmazonWeb/shared/bundle --without development test --deployment --quiet as ec2-user@13.230.13.70
+ DEBUG [f5a4033f] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/AmazonWeb/shared/bundle --without development test --deployment --quiet )
+  INFO [f5a4033f] Finished in 92.081 seconds with exit status 0 (successful).
+ DEBUG [63eeb4b8] Running if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [63eeb4b8] Command: if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi
+ DEBUG [63eeb4b8] Finished in 0.378 seconds with exit status 0 (successful).
+  INFO [592708b6] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@13.230.13.70
+ DEBUG [592708b6] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" RAILS_GROUPS="" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.026278 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/ad_bose-4cee0fb7476c45b9589ba3a81bf3d3e4c55197a86f3b7ee0d230b51df1fdd654.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.028399 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/add_cartmark-6186f1a9e2ceb94c490a8bee21866330f36e929f7a3ccb863ca77c185e939194.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.030171 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/addresses-8fa1f2e9efe4d0c7658a1813229d7193a9ac201efe5d955845e5814000481eeb.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.031911 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/amazongiftcard-e788dc156830200c3d13c665d049c2075b5856e6e5287c56a7b133106fe7261f.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.033778 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/audio_visuals-b2847050f17edb27c9aad81f2000a39c6ba5f2f9c085416cb10d574041c013bc.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.035553 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/camera-2e11738736b5ec1f991ba7e1594bffc21e637c26afb0351016691ec296fcdee4.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.037393 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/campaign-728390fd109860547f0a5fc84774417f432b3584a4a18e06ae9c9d6d08763170.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.039430 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/card_brand-337ab290907a0f0f3ec88462a2297dc67c80a3029c72405f79d1e3db820a03c0.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.041343 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/carrier_brand-01a50a86fc1e20affcf94c629fe4e3b7f25baa38d80fd4fc2101b5fa14fbd3a3.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.043750 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/cart-d3afff5c9b9508db68f9d61a4b81aee8dd7f75cc6aff9b1fc143860eec201d69.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.045680 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/checkbox_unselected-4572182bd649ee6a7ed1b46a227e73510f4ed2db925720afe8e21b36a488401e.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.048011 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/echodot-8e9816841eee60a1be9ed2c0f1ec9498705c5d79fc8071f5e67d2c3b5178f5ec.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.050021 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/face_icon-a29c604961e2255112097f8e19473041e118c80c1043dfe3d01eb331d5a1c9a3.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.052020 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/giftcard-be50e7c7fc1fb1b4a12fa410f34f0a2c939811cd68266a4bdb651477ecc8a1e2.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.053860 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/home_kitchen-fb19c27a69cc5c7242f6bec43deee74cad374a408a355f38d83af642277d6e84.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.056324 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/kaden_ranking-3ea7948eef759d2b9fb07bc74444405bbd407db765a3169634a6efad2067199c.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.058318 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/loginlogo-d2409b473f8130e8ec8bd9f282c819f299c33355ff6bf2b31fd8d66b1f209722.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.060347 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/logo-89a0e1c3395b006b7d2da98ace7e800b031fbfbec5881978de12edb415bd6ada.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.063129 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/newyear_sale-8e2db45629d1f96d74083c95b6f8843a0b1afc5720e51d6bd51ac9e862bb4abe.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.065469 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/orders-7c7fbcbe7f37e40c104095165da89ea068d436e0e7e8e4cbec4094f1407ed39f.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.067536 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/payments-8631f760c514f4c289fd6e3c3c463194f91bd262c8492676ad2073718ccdfd42.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.069456 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/pc_items-9e7cc096303b3e1cfaeef82883196d6bf74e77be4a1b548e3af3146d6d361659.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.071467 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/prime-61bd94d0652e28e9d3df2ce456922672f119232ea8299c1396aec51ab6094372.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.073418 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/prime_search_icon-76c7296b31055584b98e6634d24216c819a612dedba5d6fdb48a81fa3c4e59a1.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.075391 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/prime_v-c2ddc865e1d40fb4acda0d783b6f247f8df1e5baf98da41eb7ae202d8c6fc5c0.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.078151 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/prime_video-efd34b876e33aeddb9bd67157fe891d946708acdfee36beeda6d3527f869dff9.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.080266 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/primemark-2ce5c0defd50fbeb05685f601391f0605a7021740ad4242d6c5d2bb705e165ae.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.082131 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/ranking-image-1-62bffdced272eb0a61d175a1275643bceebf07937ec7ccc111252603d15b9801.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.084313 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/ranking-image-2-294f735edde785dd78f9319aacfbe8aabb03cca1c79514239f5dbf64a32547b3.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.086209 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/ranking-image-3-171fadf7f34bb74b5ea995308210bf2f368dd978a802f44eec2a1ff13a494e68.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.088128 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/ranking-image-4-861d3e04103a8e19e03b74096795d5d7c9156315731b108b3e09e590ad566fe5.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.090056 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/ranking-image-5-cdd7a1fdb32bdb5b4338ab085f3d9ae23a0b3a285ffe46c8046238af2ca1e5cd.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.092019 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/recommenditems-4cbe992d2255cdfe77e271ee486852c64b0fdbd1489b6f3252cd5a13febecafe.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.093934 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/regi_saleimage-5d031df4601693e4eeb37b833c8be6e7e7712a6c9a614df3b1889ad1460f1e0e.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.096293 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/searchSprite-b65a380efee144524eeae0101879767186919bbc58b910b16f8ab12d0b589f8d.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.098809 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/search_result_img_1-44ca55a5cc5c8cf10134302978f754491d0ce90362a0692a459cea91f46b79f6.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.101438 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/search_result_img_2-9222b201675761f2e802a51a303110ec7b53e8b3e617c566fb8e5790344ff9d8.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.104036 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/search_result_img_3-97bdfc93d9bd1dcabb0f7f61d184fa5d7f0c1bb58c777ecf3c7be9fd921550ff.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.106113 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/security-395cf92b2cab190a0f100c9b94b627891ffb78fd1c75bdec6058b547dc71692c.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.108063 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/shopdelivery-82d238fe20de3daaafec387be155aed5985ed60e309a5e49048f99ddf25d1a39.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.109989 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/shopdeliveryicon-462637d269c0bb104a96b121ac8bdc410e66ad6f87bdc5b4c4f5ee595d46de2a.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.112067 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/sidebar_search_bnr-a96230ee2b86f1fa5fbe23fdbf130c8b0e91a1359dfa71e3702be86b1e0207ae.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.115680 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/ui_base-fe03c22c3d6ab06b32e90eb360000d6c5aacff2ce286a1d1c1aa1554b7690d30.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.118319 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/visa_mark-eba3818032d215afbd913a31d5b059e5b45f41121e018b5887e0d8696e860ee3.gif
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.120328 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/wintersale-b229e4c86ef971ae48ae4e96e887fb39ca21a4ce00906bf5b9c862fd29afd298.jpg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:04.122281 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/wintersale_officeitems-0483921c8817fc9c2b9188810fcf5365632f96cbc115472ef099b61b310d3677.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:12.783858 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/application-f357addb92872555f1a6ab585be8d1ae7b6cfbe87f82e81210cf86b578044143.js
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:12.784606 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/application-f357addb92872555f1a6ab585be8d1ae7b6cfbe87f82e81210cf86b578044143.js.gz
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.760084 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/application-4cb0ac975196be3f35291aedf68ef0d6c92d3341ff7a79e6159c2822c9e5ec07.css
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.760742 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/application-4cb0ac975196be3f35291aedf68ef0d6c92d3341ff7a79e6159c2822c9e5ec07.css.gz
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.766641 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-bg_flat_75_ffffff_40x100-39ab7ccd9f4e82579da78a9241265df288d8eb65dbbd7cf48aed2d0129887df5.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.767146 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-bg_highlight-soft_75_cccccc_1x100-54270656df079c4da5182629a080fc633b6f84b87985eb016d25a560e2c38d4a.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.767947 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-bg_glass_75_e6e6e6_1x400-ddf5dd4e0ef2b185e8bb0af7b6e90ebe74a84384cb4700658e76e754c8bfe550.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.771929 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-bg_glass_75_dadada_1x400-c108f5cbf2dd9ec07a26530695ddd95e1664597ce6c056ae44c162cc2e28cec4.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.772422 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-bg_glass_65_ffffff_1x400-f0e6cd91b837d5c5644d026e5ffeccd907953317cd5c0f689901733afda260b2.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.772905 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-bg_glass_55_fbf9ee_1x400-691597e8a40a891ea94d3589976ecfc33e6145c49422443b00ac2b5a0022964c.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.773376 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-bg_glass_95_fef1ec_1x400-f6f1c1bedf1a0f37cfef81d12f5f012869d1ee7c984775a569827a1784d34f5c.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.773851 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-icons_222222_256x240-57adb0d65f4e91dacfee975d9574422bee7486c8a182d60133728c672f2cdbbc.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.774339 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-icons_888888_256x240-ea2e29625de3463465e93b002b065f5833e05b97f7a052b1c141e754d62e1a8b.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.774836 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-icons_454545_256x240-07460e843c3e59aaadbb34231e699e856a2980753c7a47b66447da5d9f93fb7f.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.775371 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-icons_2e83ff_256x240-20f8c6667afc48aa433ee9eb6d8a0584bdbd6b4a4a9091ff1e6b3adb31e63bd9.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.775869 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-icons_cd0a0a_256x240-1e32c6dbf5d3fd342f27a78aa881550d6412aa207f48468724a6a15402b6041b.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.776336 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/jquery-ui/ui-bg_flat_0_aaaaaa_40x100-9a8492a580bf85d3e98ae8861fbd45567e5a1f83eeafcf9574da0399d5f602ab.png
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.776790 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.777360 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/fontawesome-webfont-7bfcab6db99d5cfbf1705ca0536ddc78585432cc5fa41bbd7ad0f009033b2979.eot.gz
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.777654 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/fontawesome-webfont-2adefcbc041e7d18fcf2d417879dc5a09997aa64d675b7a3c4b6ce33da13f3fe.woff2
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.783918 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/fontawesome-webfont-ba0c59deb5450f5cb41b3f93609ee2d0d995415877ddfa223e8a8a7533474f07.woff
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.784282 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.784540 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/fontawesome-webfont-aa58f33f239a0fb02f5c7a6c45c043d7a9ac9a093335806694ecd6d4edc0d6a8.ttf.gz
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.784845 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg
+ DEBUG [592708b6] 	I, [2018-01-16T09:11:21.785389 #32701]  INFO -- : Writing /var/www/AmazonWeb/releases/20180116090916/public/assets/fontawesome-webfont-ad6157926c1622ba4e1d03d478f1541368524bfc46f51e42fe0d945f7ef323e4.svg.gz
+  INFO [592708b6] Finished in 21.348 seconds with exit status 0 (successful).
+ DEBUG [bee219a1] Running if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [bee219a1] Command: if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi
+ DEBUG [bee219a1] Finished in 0.100 seconds with exit status 0 (successful).
+  INFO [434f81aa] Running /usr/bin/env mkdir -p /var/www/AmazonWeb/releases/20180116090916/assets_manifest_backup as ec2-user@13.230.13.70
+ DEBUG [434f81aa] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/AmazonWeb/releases/20180116090916/assets_manifest_backup )
+  INFO [434f81aa] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [01ddbc8c] Running /usr/bin/env ls /var/www/AmazonWeb/releases/20180116090916/public/assets/.sprockets-manifest* as ec2-user@13.230.13.70
+ DEBUG [01ddbc8c] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/AmazonWeb/releases/20180116090916/public/assets/.sprockets-manifest* )
+ DEBUG [01ddbc8c] 	/var/www/AmazonWeb/releases/20180116090916/public/assets/.sprockets-manifest-a19be8746ecb43388c5f90309d0273cd.json
+ DEBUG [01ddbc8c] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [e1401fc4] Running /usr/bin/env ls /var/www/AmazonWeb/releases/20180116090916/public/assets/.sprockets-manifest* as ec2-user@13.230.13.70
+ DEBUG [e1401fc4] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/AmazonWeb/releases/20180116090916/public/assets/.sprockets-manifest* )
+ DEBUG [e1401fc4] 	/var/www/AmazonWeb/releases/20180116090916/public/assets/.sprockets-manifest-a19be8746ecb43388c5f90309d0273cd.json
+ DEBUG [e1401fc4] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [68021d42] Running /usr/bin/env cp /var/www/AmazonWeb/releases/20180116090916/public/assets/.sprockets-manifest-a19be8746ecb43388c5f90309d0273cd.json /var/www/AmazonWeb/releases/20180116090916/assets_manifest_backup as ec2-user@13.230.13.70
+ DEBUG [68021d42] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/AmazonWeb/releases/20180116090916/public/assets/.sprockets-manifest-a19be8746ecb43388c5f90309d0273cd.json /var/www/AmazonWeb/releases/20180116090916/assets_manifest_backup )
+  INFO [68021d42] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [47cb5ba1] Running if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [47cb5ba1] Command: if test ! -d /var/www/AmazonWeb/releases/20180116090916; then echo "Directory does not exist '/var/www/AmazonWeb/releases/20180116090916'" 1>&2; false; fi
+ DEBUG [47cb5ba1] Finished in 0.088 seconds with exit status 0 (successful).
+  INFO [07952495] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@13.230.13.70
+ DEBUG [07952495] Command: cd /var/www/AmazonWeb/releases/20180116090916 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [07952495] Finished in 2.391 seconds with exit status 0 (successful).
+  INFO [325aea40] Running /usr/bin/env ln -s /var/www/AmazonWeb/releases/20180116090916 /var/www/AmazonWeb/releases/current as ec2-user@13.230.13.70
+ DEBUG [325aea40] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/AmazonWeb/releases/20180116090916 /var/www/AmazonWeb/releases/current )
+  INFO [325aea40] Finished in 0.079 seconds with exit status 0 (successful).
+  INFO [674ac222] Running /usr/bin/env mv /var/www/AmazonWeb/releases/current /var/www/AmazonWeb as ec2-user@13.230.13.70
+ DEBUG [674ac222] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/AmazonWeb/releases/current /var/www/AmazonWeb )
+  INFO [674ac222] Finished in 0.080 seconds with exit status 0 (successful).
+ DEBUG [e1a1a112] Running if test ! -d /var/www/AmazonWeb/current; then echo "Directory does not exist '/var/www/AmazonWeb/current'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [e1a1a112] Command: if test ! -d /var/www/AmazonWeb/current; then echo "Directory does not exist '/var/www/AmazonWeb/current'" 1>&2; false; fi
+ DEBUG [e1a1a112] Finished in 0.077 seconds with exit status 0 (successful).
+ DEBUG [741b5df9] Running [ -e /var/www/AmazonWeb/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/AmazonWeb/shared/tmp/pids/unicorn.pid` as ec2-user@13.230.13.70
+ DEBUG [741b5df9] Command: [ -e /var/www/AmazonWeb/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/AmazonWeb/shared/tmp/pids/unicorn.pid`
+ DEBUG [741b5df9] Finished in 0.076 seconds with exit status 1 (failed).
+  INFO [5ce87a8c] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/AmazonWeb/current/config/unicorn.rb -E deployment -D  as ec2-user@13.230.13.70
+ DEBUG [5ce87a8c] Command: cd /var/www/AmazonWeb/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/AmazonWeb/current/config/unicorn.rb -E deployment -D  )
+  INFO [5ce87a8c] Finished in 2.549 seconds with exit status 0 (successful).
+ DEBUG [e5d4e6b0] Running if test ! -d /var/www/AmazonWeb/current; then echo "Directory does not exist '/var/www/AmazonWeb/current'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [e5d4e6b0] Command: if test ! -d /var/www/AmazonWeb/current; then echo "Directory does not exist '/var/www/AmazonWeb/current'" 1>&2; false; fi
+ DEBUG [e5d4e6b0] Finished in 0.077 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [c3766cb0] Running /usr/bin/env kill -s USR2 `cat /var/www/AmazonWeb/shared/tmp/pids/unicorn.pid` as ec2-user@13.230.13.70
+ DEBUG [c3766cb0] Command: cd /var/www/AmazonWeb/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env kill -s USR2 `cat /var/www/AmazonWeb/shared/tmp/pids/unicorn.pid` )
+  INFO [c3766cb0] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG [099f7ddb] Running /usr/bin/env ls -x /var/www/AmazonWeb/releases as ec2-user@13.230.13.70
+ DEBUG [099f7ddb] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls -x /var/www/AmazonWeb/releases )
+ DEBUG [099f7ddb] 	20180116090916
+ DEBUG [099f7ddb] Finished in 0.318 seconds with exit status 0 (successful).
+ DEBUG [442adc6f] Running if test ! -d /var/www/AmazonWeb/releases; then echo "Directory does not exist '/var/www/AmazonWeb/releases'" 1>&2; false; fi as ec2-user@13.230.13.70
+ DEBUG [442adc6f] Command: if test ! -d /var/www/AmazonWeb/releases; then echo "Directory does not exist '/var/www/AmazonWeb/releases'" 1>&2; false; fi
+ DEBUG [442adc6f] Finished in 0.287 seconds with exit status 0 (successful).
+  INFO [b4bbee15] Running /usr/bin/env echo "Branch master (at 6737dac164922f95fdc2fbf2315b81a246049a97) deployed as release 20180116090916 by phantom" >> /var/www/AmazonWeb/revisions.log as ec2-user@13.230.13.70
+ DEBUG [b4bbee15] Command: cd /var/www/AmazonWeb/releases && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "Branch master (at 6737dac164922f95fdc2fbf2315b81a246049a97) deployed as release 20180116090916 by phantom" >> /var/www/AmazonWeb/revisions.log )
+  INFO [b4bbee15] Finished in 0.309 seconds with exit status 0 (successful).
