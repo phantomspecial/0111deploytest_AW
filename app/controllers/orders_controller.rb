@@ -71,6 +71,7 @@ class OrdersController < ApplicationController
     # 代引きの場合、Cashを保存する
     if @payment == "Cash"
       @@pay = "Cash"
+      @@cardlast4 = ""
     else
       @@pay = "Creditcard"
       @user_info = Payjp::Customer.retrieve(id: current_user.id.to_s)
