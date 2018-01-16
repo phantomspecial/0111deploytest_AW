@@ -79,7 +79,7 @@
           .order__main__inner__under__delivery-date__detail
             配達またはポスト投函が完了しました
         .order__main__inner__under__leftbox
-          - order_orderdetails(user_order, @range).each do |order_detail|
+          - user_order.orderdetails.each do |order_detail|
             .underbox
               .underbox__image
                 = image_tag order_detail.stock.image, width:150

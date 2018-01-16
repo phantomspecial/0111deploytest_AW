@@ -1344,3 +1344,757 @@ Processing by StocksController#index as HTML
 Completed 200 OK in 186ms (Views: 178.4ms | ActiveRecord: 1.6ms)
 
 
+Started GET "/" for 127.0.0.1 at 2018-01-17 04:42:38 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2018-01-02 00:00:00' AND '2018-01-16 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (366.5ms)
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (11.0ms)
+  Rendered stocks/index.html.haml within layouts/application (424.9ms)
+Completed 200 OK in 674ms (Views: 581.6ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:42:44 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (25.8ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  Rendered shared/_footer.html.haml (23.5ms)
+  Rendered orders/index.html.haml within layouts/application (77.5ms)
+Completed 200 OK in 225ms (Views: 216.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-17 04:42:46 +0900
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.6ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2018-01-02 00:00:00' AND '2018-01-16 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (18.9ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (8.2ms)
+  Rendered stocks/index.html.haml within layouts/application (66.3ms)
+Completed 200 OK in 159ms (Views: 148.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/stocks/1" for 127.0.0.1 at 2018-01-17 04:42:48 +0900
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStock Load (0.4ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mReview Load (0.8ms)[0m  [1m[34mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`stock_id` = 1[0m
+  Rendering stocks/show.html.haml within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (31.3ms)
+  Rendered shared/_footer.html.haml (10.2ms)
+  Rendered stocks/show.html.haml within layouts/application (146.6ms)
+Completed 200 OK in 306ms (Views: 259.6ms | ActiveRecord: 11.1ms)
+
+
+Started POST "/carts" for 127.0.0.1 at 2018-01-17 04:42:59 +0900
+Processing by CartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t4WOd9q7N7ijUBFHWgGrrjjWhLYSGR/EpfsEGt515ExcGuaiAC9CuVu1BbwwlDw5xu4/anQeKbb7N+3dRCDyUg==", "cart"=>{"quantity"=>"1", "stock_id"=>"1", "buylater_flg"=>"false"}, "commit"=>"カートに入れる"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (5.7ms)[0m  [1m[32mINSERT INTO `carts` (`quantity`, `stock_id`, `user_id`, `buylater_flg`, `created_at`, `updated_at`) VALUES (1, 1, 1, 0, '2018-01-16 19:42:59', '2018-01-16 19:42:59')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendering carts/create.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendered shared/_header.html.haml (24.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (12.0ms)
+  Rendered carts/create.html.haml within layouts/application (60.2ms)
+Completed 200 OK in 179ms (Views: 156.8ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/orders/confirm?class=add-to-cart__box__right__box__registerbtn__link" for 127.0.0.1 at 2018-01-17 04:43:01 +0900
+Processing by OrdersController#confirm as HTML
+  Parameters: {"class"=>"add-to-cart__box__right__box__registerbtn__link"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendering orders/confirm.html.haml within layouts/application
+  Rendered orders/confirm.html.haml within layouts/application (31.6ms)
+Completed 200 OK in 756ms (Views: 123.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/orders/new?utf8=%E2%9C%93&payments=car_490a6edfbcc3556103fa0a234ed9" for 127.0.0.1 at 2018-01-17 04:43:04 +0900
+Processing by OrdersController#new as HTML
+  Parameters: {"utf8"=>"✓", "payments"=>"car_490a6edfbcc3556103fa0a234ed9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/new.html.haml within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/new.html.haml within layouts/application (37.4ms)
+Completed 200 OK in 859ms (Views: 143.8ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2018-01-17 04:43:08 +0900
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"KyPsC/gIPbbhHX9XIPJkWDjw2iK1s5X2Vb2nx2M/91LGcF7jg7b3rC2uSoQVct22jl7IoOt9KMn7SEihEAGGcg=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `orders` (`user_id`, `created_at`, `updated_at`) VALUES (1, '2018-01-16 19:43:08', '2018-01-16 19:43:08')[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orderdetails` (`order_id`, `stock_id`, `quantity`, `sell_price`, `shipping_cost`, `total_price`, `total_shippingcost`, `created_at`, `updated_at`) VALUES (1, 1, 1, 200000, 1000, 200000, 1000, '2018-01-16 19:43:08', '2018-01-16 19:43:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubCategory Load (0.2ms)[0m  [1m[34mSELECT  `sub_categories`.* FROM `sub_categories` WHERE `sub_categories`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE `stocks` SET `current_stock` = 99, `updated_at` = '2018-01-16 19:43:08' WHERE `stocks`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE `orders` SET `total` = 200000, `total_shippingcost` = 1000 WHERE `orders`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `orders` SET `payments` = 'Creditcard4242', `status` = 'Shipping(preparation)' WHERE `orders`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `carts` WHERE `carts`.`id` = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 1 LIMIT 1[0m
+  Rendering orders/create.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendered shared/_header.html.haml (22.4ms)
+  Rendered shared/_footer.html.haml (9.0ms)
+  Rendered orders/create.html.haml within layouts/application (50.5ms)
+Completed 200 OK in 702ms (Views: 147.6ms | ActiveRecord: 16.4ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:43:11 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (18.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1 AND (`orderdetails`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_footer.html.haml (8.0ms)
+  Rendered orders/index.html.haml within layouts/application (49.5ms)
+Completed 200 OK in 166ms (Views: 158.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-17 04:46:11 +0900
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2018-01-02 00:00:00' AND '2018-01-16 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (22.0ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (8.8ms)
+  Rendered stocks/index.html.haml within layouts/application (58.5ms)
+Completed 200 OK in 166ms (Views: 158.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:46:16 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (20.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1 AND (`orderdetails`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:47:16 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (26.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1 AND (`orderdetails`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_footer.html.haml (12.8ms)
+  Rendered orders/index.html.haml within layouts/application (52077.3ms)
+Completed 200 OK in 52193ms (Views: 52184.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:50:51 +0900
+  Rendered shared/_footer.html.haml (11.1ms)
+  Rendered orders/index.html.haml within layouts/application (283065.9ms)
+Completed 200 OK in 283187ms (Views: 283177.6ms | ActiveRecord: 2.0ms)
+
+
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (24.7ms)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_footer.html.haml (9.9ms)
+  Rendered orders/index.html.haml within layouts/application (83.7ms)
+Completed 200 OK in 206ms (Views: 177.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:52:26 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (35.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  Rendered orders/index.html.haml within layouts/application (72.1ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 1.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `order_details' for #<Order:0x007ff48d31d420>
+Did you mean?  orderdetails
+               orderdetails=
+               orderdetail_ids):
+    79:           .order__main__inner__under__delivery-date__detail
+    80:             配達またはポスト投函が完了しました
+    81:         .order__main__inner__under__leftbox
+    82:           - user_order.order_details.each do |order_detail|
+    83:             .underbox
+    84:               .underbox__image
+    85:                 = image_tag order_detail.stock.image, width:150
+  
+app/views/orders/index.html.haml:82:in `block in _app_views_orders_index_html_haml__413248991605278012_70344111223360'
+app/views/orders/index.html.haml:48:in `_app_views_orders_index_html_haml__413248991605278012_70344111223360'
+  Rendering /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (81.4ms)
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:53:02 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (21.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendered shared/_footer.html.haml (10.4ms)
+  Rendered orders/index.html.haml within layouts/application (95.1ms)
+Completed 200 OK in 196ms (Views: 180.6ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-17 04:53:04 +0900
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2018-01-02 00:00:00' AND '2018-01-16 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (35.0ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (9.9ms)
+  Rendered stocks/index.html.haml within layouts/application (76.7ms)
+Completed 200 OK in 186ms (Views: 171.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/admins" for 127.0.0.1 at 2018-01-17 04:53:08 +0900
+Processing by AdminsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendering admins/index.html.haml within layouts/application
+  Rendered shared/_adminheader.html.haml (4.0ms)
+  Rendered shared/_leftsidebar.html.haml (5.5ms)
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` ORDER BY `orders`.`created_at` DESC LIMIT 10[0m
+  Rendered shared/_adminfooter.html.haml (2.7ms)
+  Rendered admins/index.html.haml within layouts/application (25.0ms)
+Completed 200 OK in 125ms (Views: 119.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/items/new" for 127.0.0.1 at 2018-01-17 04:53:09 +0900
+Processing by ItemsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering items/new.html.haml within layouts/application
+  Rendered shared/_adminheader.html.haml (4.6ms)
+  Rendered shared/_leftsidebar.html.haml (5.1ms)
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories` ORDER BY `categories`.`id` ASC[0m
+  Rendered shared/_adminfooter.html.haml (1.8ms)
+  Rendered items/new.html.haml within layouts/application (27.6ms)
+Completed 200 OK in 165ms (Views: 138.9ms | ActiveRecord: 7.6ms)
+
+
+Started GET "/categories/2/sub_categories" for 127.0.0.1 at 2018-01-17 04:53:34 +0900
+Processing by SubCategoriesController#index as JSON
+  Parameters: {"category_id"=>"2"}
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT  `categories`.* FROM `categories` WHERE `categories`.`id` = 2 LIMIT 1[0m
+  [1m[36mSubCategory Load (0.3ms)[0m  [1m[34mSELECT `sub_categories`.`id`, `sub_categories`.`name` FROM `sub_categories` WHERE `sub_categories`.`category_id` = 2[0m
+Completed 200 OK in 20ms (Views: 4.3ms | ActiveRecord: 7.6ms)
+
+
+Started POST "/items" for 127.0.0.1 at 2018-01-17 04:53:37 +0900
+Processing by ItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hN75STc2X0kX32gqDeXTSWXvZqQ1vJXTkPuk2YbaIiiAkC3cKrUYOwAcH2lwsBoxpKSrfQWk+U/AbvZtjRpHXg==", "item"=>{"name"=>"Apple Macbook Pro 2017", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ff48e6ea318 @tempfile=#<Tempfile:/var/folders/g3/yk34j7h905zdnz47sp1hjbsr0000gn/T/RackMultipart20180117-14538-f0uuts.jpeg>, @original_filename="download1.jpeg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"item[image]\"; filename=\"download1.jpeg\"\r\nContent-Type: image/jpeg\r\n">, "detail"=>"test7", "maker"=>"Apple", "unit_cost"=>"240000", "quantity"=>"100", "sell_price"=>"245000", "shipping_cost"=>"1000", "category_id"=>"2", "sub_category_id"=>"6", "item_flg"=>"0"}, "commit"=>"Send"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `items` (`name`, `image`, `detail`, `maker`, `unit_cost`, `quantity`, `sell_price`, `shipping_cost`, `item_flg`, `created_at`, `updated_at`, `sub_category_id`, `category_id`) VALUES ('Apple Macbook Pro 2017', 'download1.jpeg', 'test7', 'Apple', 240000, 100, 245000, 1000, 0, '2018-01-16 19:53:37', '2018-01-16 19:53:37', 6, 2)[0m
+  [1m[35m (5.7ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 991ms (ActiveRecord: 6.4ms)
+
+
+  
+Excon::Error::BadRequest (Expected(200) <=> Actual(400 Bad Request)
+excon.error.response
+  :body          => "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<Error><Code>AuthorizationHeaderMalformed</Code><Message>The authorization header is malformed; the region 'us-east-1' is wrong; expecting 'ap-northeast-1'</Message><Region>ap-northeast-1</Region><RequestId>ACEC4C0375DE4505</RequestId><HostId>kU9XaiKImjtomUNjslctFznEiJigUgRsFcg+gPEPkIiT2aszBRhXAMnKROYR6/9GzkZjmsY+qXE=</HostId></Error>"
+  :cookies       => [
+  ]
+  :headers       => {
+    "Connection"       => "close"
+    "Content-Type"     => "application/xml"
+    "Date"             => "Tue, 16 Jan 2018 19:53:38 GMT"
+    "Server"           => "AmazonS3"
+    "x-amz-id-2"       => "kU9XaiKImjtomUNjslctFznEiJigUgRsFcg+gPEPkIiT2aszBRhXAMnKROYR6/9GzkZjmsY+qXE="
+    "x-amz-request-id" => "ACEC4C0375DE4505"
+  }
+  :host          => "amazonweb-image.s3.amazonaws.com"
+  :local_address => "10.50.32.1"
+  :local_port    => 57469
+  :path          => "/uploads/item/image/2/download1.jpeg"
+  :port          => 443
+  :reason_phrase => "Bad Request"
+  :remote_ip     => "52.219.0.1"
+  :status        => 400
+  :status_line   => "HTTP/1.1 400 Bad Request\r\n"
+):
+  
+app/controllers/items_controller.rb:19:in `create'
+  Rendering /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.4ms)
+  Rendering /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/phantom/.anyenv/envs/rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.6/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (77.2ms)
+Started GET "/" for 127.0.0.1 at 2018-01-17 04:54:26 +0900
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2018-01-02 00:00:00' AND '2018-01-16 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (25.7ms)
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (11.1ms)
+  Rendered stocks/index.html.haml within layouts/application (84.6ms)
+Completed 200 OK in 205ms (Views: 195.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/stocks/1" for 127.0.0.1 at 2018-01-17 04:54:33 +0900
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStock Load (0.4ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`stock_id` = 1[0m
+  Rendering stocks/show.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (16.4ms)
+  Rendered shared/_footer.html.haml (10.7ms)
+  Rendered stocks/show.html.haml within layouts/application (77.9ms)
+Completed 200 OK in 212ms (Views: 189.7ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/carts" for 127.0.0.1 at 2018-01-17 04:54:37 +0900
+Processing by CartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"djogFBLcHUFmUdt5ObaudAXfHEtXkS7145T1bcDwlVadpUjByEhoQJ60z4JTIznj++enlzGWGIe9WByqWqWDSA==", "cart"=>{"quantity"=>"1", "stock_id"=>"1", "buylater_flg"=>"false"}, "commit"=>"カートに入れる"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `carts` (`quantity`, `stock_id`, `user_id`, `buylater_flg`, `created_at`, `updated_at`) VALUES (1, 1, 1, 0, '2018-01-16 19:54:37', '2018-01-16 19:54:37')[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendering carts/create.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendered shared/_header.html.haml (21.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (9.1ms)
+  Rendered carts/create.html.haml within layouts/application (50.2ms)
+Completed 200 OK in 168ms (Views: 146.9ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/orders/confirm?class=add-to-cart__box__right__box__registerbtn__link" for 127.0.0.1 at 2018-01-17 04:54:39 +0900
+Processing by OrdersController#confirm as HTML
+  Parameters: {"class"=>"add-to-cart__box__right__box__registerbtn__link"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendering orders/confirm.html.haml within layouts/application
+  Rendered orders/confirm.html.haml within layouts/application (24.6ms)
+Completed 200 OK in 964ms (Views: 142.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/orders/new?utf8=%E2%9C%93&payments=car_490a6edfbcc3556103fa0a234ed9" for 127.0.0.1 at 2018-01-17 04:54:42 +0900
+Processing by OrdersController#new as HTML
+  Parameters: {"utf8"=>"✓", "payments"=>"car_490a6edfbcc3556103fa0a234ed9"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/new.html.haml within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/new.html.haml within layouts/application (23.2ms)
+Completed 200 OK in 1191ms (Views: 122.9ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2018-01-17 04:54:44 +0900
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"65CsU8qpYW4+/GV+CmXaNWX8Ib11fXlToiwKIgZfdl4Gwx67sRerdPJPUK0/5WPb01IzPyuzxGwM2eVEdWEHfg=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `orders` (`user_id`, `created_at`, `updated_at`) VALUES (1, '2018-01-16 19:54:44', '2018-01-16 19:54:44')[0m
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 2 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `orderdetails` (`order_id`, `stock_id`, `quantity`, `sell_price`, `shipping_cost`, `total_price`, `total_shippingcost`, `created_at`, `updated_at`) VALUES (2, 1, 1, 200000, 1000, 200000, 1000, '2018-01-16 19:54:44', '2018-01-16 19:54:44')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubCategory Load (0.2ms)[0m  [1m[34mSELECT  `sub_categories`.* FROM `sub_categories` WHERE `sub_categories`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE `stocks` SET `current_stock` = 98, `updated_at` = '2018-01-16 19:54:44' WHERE `stocks`.`id` = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `orders` SET `total` = 200000, `total_shippingcost` = 1000 WHERE `orders`.`id` = 2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE `orders` SET `payments` = 'Creditcard4242', `status` = 'Shipping(preparation)' WHERE `orders`.`id` = 2[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM `carts` WHERE `carts`.`id` = 2[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrderdetail Load (0.4ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 2[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 2 LIMIT 1[0m
+  Rendering orders/create.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendered shared/_header.html.haml (22.5ms)
+  Rendered shared/_footer.html.haml (11.7ms)
+  Rendered orders/create.html.haml within layouts/application (55.5ms)
+Completed 200 OK in 664ms (Views: 168.7ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:54:46 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.5ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (24.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 2[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (11.5ms)
+  Rendered orders/index.html.haml within layouts/application (66.1ms)
+Completed 200 OK in 171ms (Views: 162.1ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:55:01 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (29.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 2[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (10.4ms)
+  Rendered orders/index.html.haml within layouts/application (100.6ms)
+Completed 200 OK in 234ms (Views: 185.5ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:55:02 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (20.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 2[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (24.3ms)
+  Rendered orders/index.html.haml within layouts/application (72.3ms)
+Completed 200 OK in 189ms (Views: 182.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:55:02 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (24.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 2[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (12.2ms)
+  Rendered orders/index.html.haml within layouts/application (68.0ms)
+Completed 200 OK in 194ms (Views: 187.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-17 04:55:04 +0900
+Processing by StocksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2018-01-02 00:00:00' AND '2018-01-16 23:59:59')[0m
+  Rendering stocks/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (20.9ms)
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT `stocks`.* FROM `stocks`[0m
+  Rendered shared/_footer.html.haml (9.7ms)
+  Rendered stocks/index.html.haml within layouts/application (62.7ms)
+Completed 200 OK in 175ms (Views: 158.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/stocks/1" for 127.0.0.1 at 2018-01-17 04:55:06 +0900
+Processing by StocksController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT `reviews`.* FROM `reviews` WHERE `reviews`.`stock_id` = 1[0m
+  Rendering stocks/show.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (22.3ms)
+  Rendered shared/_footer.html.haml (10.3ms)
+  Rendered stocks/show.html.haml within layouts/application (108.0ms)
+Completed 200 OK in 234ms (Views: 203.8ms | ActiveRecord: 8.7ms)
+
+
+Started POST "/carts" for 127.0.0.1 at 2018-01-17 04:55:09 +0900
+Processing by CartsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jFpF+xVkWCA1ZPOe8KehM2eqcap9lUpbwdqx0A9McUxnxS0uz/AtIc2B52WaMjakmZLKdhuSfCmfFlgXlRlnUg==", "cart"=>{"quantity"=>"3", "stock_id"=>"1", "buylater_flg"=>"false"}, "commit"=>"カートに入れる"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `carts` (`quantity`, `stock_id`, `user_id`, `buylater_flg`, `created_at`, `updated_at`) VALUES (3, 1, 1, 0, '2018-01-16 19:55:09', '2018-01-16 19:55:09')[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendering carts/create.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCart Load (0.2ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendered shared/_header.html.haml (23.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (9.6ms)
+  Rendered carts/create.html.haml within layouts/application (54.3ms)
+Completed 200 OK in 186ms (Views: 165.8ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/orders/confirm?class=add-to-cart__box__right__box__registerbtn__link" for 127.0.0.1 at 2018-01-17 04:55:12 +0900
+Processing by OrdersController#confirm as HTML
+  Parameters: {"class"=>"add-to-cart__box__right__box__registerbtn__link"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  Rendering orders/confirm.html.haml within layouts/application
+  Rendered orders/confirm.html.haml within layouts/application (27.6ms)
+Completed 200 OK in 639ms (Views: 133.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/orders/new?utf8=%E2%9C%93&payments=car_490a6edfbcc3556103fa0a234ed9" for 127.0.0.1 at 2018-01-17 04:55:15 +0900
+Processing by OrdersController#new as HTML
+  Parameters: {"utf8"=>"✓", "payments"=>"car_490a6edfbcc3556103fa0a234ed9"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering orders/new.html.haml within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered orders/new.html.haml within layouts/application (43.7ms)
+Completed 200 OK in 783ms (Views: 166.7ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/orders" for 127.0.0.1 at 2018-01-17 04:55:17 +0900
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"+ZDxwgbBg7KfjIfUPJIey7kk8GeB5vwk4O+css7bUBcUw0MqfX9JqFM/sgcJEqclD4ri5d8oQRtOGnPUveUhNw=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.8ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `orders` (`user_id`, `created_at`, `updated_at`) VALUES (1, '2018-01-16 19:55:17', '2018-01-16 19:55:17')[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  [1m[36mStock Load (0.3ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 3 LIMIT 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `orderdetails` (`order_id`, `stock_id`, `quantity`, `sell_price`, `shipping_cost`, `total_price`, `total_shippingcost`, `created_at`, `updated_at`) VALUES (3, 1, 3, 200000, 1000, 600000, 2400, '2018-01-16 19:55:17', '2018-01-16 19:55:17')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSubCategory Load (0.3ms)[0m  [1m[34mSELECT  `sub_categories`.* FROM `sub_categories` WHERE `sub_categories`.`id` = 8 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `stocks` SET `current_stock` = 95, `updated_at` = '2018-01-16 19:55:17' WHERE `stocks`.`id` = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE `orders` SET `total` = 600000, `total_shippingcost` = 2400 WHERE `orders`.`id` = 3[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE `orders` SET `payments` = 'Creditcard4242', `status` = 'Shipping(preparation)' WHERE `orders`.`id` = 3[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM `carts` WHERE `carts`.`id` = 3[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 3[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT  `orders`.* FROM `orders` WHERE `orders`.`id` = 3 LIMIT 1[0m
+  Rendering orders/create.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCart Load (0.3ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendered shared/_header.html.haml (40.3ms)
+  Rendered shared/_footer.html.haml (19.1ms)
+  Rendered orders/create.html.haml within layouts/application (91.6ms)
+Completed 200 OK in 710ms (Views: 232.8ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/orders" for 127.0.0.1 at 2018-01-17 04:55:19 +0900
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (25.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-12-17 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 3[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 2[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (11.0ms)
+  Rendered orders/index.html.haml within layouts/application (70.3ms)
+Completed 200 OK in 185ms (Views: 175.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/orders?utf8=%E2%9C%93&period=6&returnperiod=" for 127.0.0.1 at 2018-01-17 04:55:23 +0900
+Processing by OrdersController#index as HTML
+  Parameters: {"utf8"=>"✓", "period"=>"6", "returnperiod"=>""}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mCart Load (0.4ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m
+  Rendering orders/index.html.haml within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT `categories`.* FROM `categories`[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT `carts`.* FROM `carts` WHERE `carts`.`user_id` = 1 AND `carts`.`buylater_flg` = 0[0m  [["user_id", 1], ["buylater_flg", 0]]
+  Rendered shared/_header.html.haml (26.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-07-16 00:00:00' AND '2018-01-16 23:59:59')[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT `orders`.* FROM `orders` WHERE `orders`.`user_id` = 1 AND (`orders`.`created_at` BETWEEN '2017-07-16 00:00:00' AND '2018-01-16 23:59:59') ORDER BY `orders`.`created_at` DESC[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 3[0m
+  [1m[36mStock Load (0.2ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m
+  [1m[36mOrderdetail Load (0.2ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 2[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mOrderdetail Load (0.3ms)[0m  [1m[34mSELECT `orderdetails`.* FROM `orderdetails` WHERE `orderdetails`.`order_id` = 1[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  `stocks`.* FROM `stocks` WHERE `stocks`.`id` = 1 LIMIT 1[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered shared/_footer.html.haml (11.9ms)
+  Rendered orders/index.html.haml within layouts/application (72.1ms)
+Completed 200 OK in 198ms (Views: 189.1ms | ActiveRecord: 2.6ms)
+
+
