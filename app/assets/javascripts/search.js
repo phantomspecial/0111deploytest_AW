@@ -15,18 +15,19 @@ $(document).on('turbolinks:load', function() {
     minLength: 2
   });
 
+
   var search_list = $(".searchResult__ul");
 
   function buildHTML(stock) {
 
   var html = '<li class="searchResult__ul__li">' +
               '<div class="searchResult__ul__li__img">' +
-              '<a href="/item/' + stock.id + '">' +
+              '<a href="/stocks/' + stock.id + '">' +
               '<img src="' + stock.image + '" border="0">' +
               '</a>' +
               '</div>' +
               '<div class="searchResult__ul__li__title">' +
-              '<a href="/item/' + stock.id + '">' +
+              '<a href="/stocks/' + stock.id + '">' +
               '<h2>' + stock.name + '</h2>' +
               '</a>' +
               '</div>' +
@@ -34,7 +35,7 @@ $(document).on('turbolinks:load', function() {
               '<span>' + stock.maker + '</span>' +
               '</div>' +
               '<div class="searchResult__ul__li__price">' +
-              '<a href="/item/' + stock.id + '">' +
+              '<a href="/stocks/' + stock.id + '">' +
               '<span>￥</span>' +
               '<span>' + stock.sell_price + '</span>' +
               '</a>' +
@@ -45,33 +46,71 @@ $(document).on('turbolinks:load', function() {
               '</div>' +
               '</div>' +
               '<div class="searchResult__ul__li__review">' +
-              '<a href="/item/' + stock.id + '">' +
-              '<span class="review_stars">' +
-              '<span class="review_number 10">' +
+              '<a href="/stocks/' + stock.id + '">' +
+              '<div class ="search_result_star review_stars ' + stock.id + '">' +
+              '</div>' +
+              '<span class="review_number">' + stock.reviews_count + '</span>' +
               '</div>' +
               '</li>'
   search_list.append(html);
 }
 
+  function review_rate_calc(data){
+    var star_avg = data.reviews_stars
+    var container = $('.search_result_star.review_stars.' + data.id)
+
+    if (star_avg == null) {
+      container.append('<div class="rate rate00"></div>');
+    }
+    else if (star_avg >= "0.0" && "0.9" >= star_avg) {
+      container.append('<div class="rate rate05"></div>');
+    }
+    else if (star_avg >= "1.0" && "1.4" >= star_avg) {
+      container.append('<div class="rate rate10"></div>');
+    }
+    else if (star_avg >= "1.5" && "1.9" >= star_avg) {
+      container.append('<div class="rate rate15"></div>');
+    }
+    else if (star_avg >= "2.0" && "2.4" >= star_avg) {
+      container.append('<div class="rate rate20"></div>');
+    }
+    else if (star_avg >= "2.5" && "2.9" >= star_avg) {
+      container.append('<div class="rate rate25"></div>');
+    }
+    else if (star_avg >= "3.0" && "3.4" >= star_avg) {
+      container.append('<div class="rate rate30"></div>');
+    }
+    else if (star_avg >= "3.5" && "3.9" >= star_avg) {
+      container.append('<div class="rate rate35"></div>');
+    }
+    else if (star_avg >= "4.0" && "4.4" >= star_avg) {
+      container.append('<div class="rate rate40"></div>');
+    }
+    else if (star_avg >= "4.5" && "4.9" >= star_avg) {
+      container.append('<div class="rate rate45"></div>');
+    }
+    else {
+      container.append('<div class="rate rate50"></div>');
+    }
+}
+
+
   $('.searchTemplate__right__searchselect').change(function() {
-    var val = $(this).val();
-    var val2 = JSON.stringify(val);
     $.ajax({
       url: '/stocks/search' + location.search,
-      type: "GET",
-      dataType: "json",
       data: $(this).serialize(),
-      processData: false,
-      contentType: false
+      dataType: 'json',
     })
-    .done(function(stocks){
+    .done(function(data){
       $('.searchResult__ul__li').remove();
-      stocks.forEach(function(stock) {
+      data.stocks.forEach(function(stock) {
       buildHTML(stock);
+      review_rate_calc(stock);
       });
     })
     .fail(function(){
       console.log("失敗");
     });
   });
+
 });
