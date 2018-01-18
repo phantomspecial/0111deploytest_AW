@@ -1,7 +1,7 @@
 class StocksController < ApplicationController
 
   before_action :permission_check, except: [:index, :show]
-  before_action :authenticate_user! , except: [:index, :show]
+  before_action :authenticate_user! , except: [:index, :show, :search, :autocomplete_stocks]
 
   def index
     @stocks = Stock.all
@@ -11,11 +11,22 @@ class StocksController < ApplicationController
       range = Date.current.ago(14.days).beginning_of_day..Date.current.end_of_day
       @recentorders = current_user.orders.where(created_at: range).length
     end
+
+    # ランダムにカテゴリーidを取得
+    @rndm_category = Category.where( 'id >= ?', rand(Category.first.id..Category.last.id) ).first
+    @rndm_stock_img = Stock.where(category_id: @rndm_category.id)
+    # ランダムにサブカテゴリーの値を取得
+    @rndm_subcategory = SubCategory.limit(15)
+    @rndm_subcategory_img = Stock.where(category_id: @rndm_subcategory.ids).select('image')
   end
 
   def show
     @stock = Stock.find(params[:id])
     @reviews = @stock.reviews
+    category_id = @stock[:category_id]
+    @category = Category.find(category_id)
+    sub_category_id = @stock[:sub_category_id]
+    @sub_category = SubCategory.find(sub_category_id)
     @current_stock_array = quantity_array_maker(@stock)
     if user_signed_in?
       quantitychecker_moveto_buylater
@@ -32,6 +43,9 @@ class StocksController < ApplicationController
         @review_dist[i] = (@reviews.where(rate: i + 1).length) *100 / reviewlength
       end
     end
+
+    # ランダムにstockを抽出
+    @stocks = Stock.where('rand()').limit(10)
   end
 
   def destroy
@@ -51,7 +65,7 @@ class StocksController < ApplicationController
     if params[:keyword].empty?
       redirect_to action: 'index'
     else
-      @stocks = Kaminari.paginate_array(search_stocks).page(params[:page]).per(3)
+      @stocks = Kaminari.paginate_array(search_stocks).page(params[:page]).per(20)
 
       # 価格の高い順等取得・表示
       if params[:value] == "1"
@@ -60,14 +74,15 @@ class StocksController < ApplicationController
         @stocks = set_search.order('sell_price ASC')
       elsif params[:value] == "3"
         @stocks = set_search.order('sell_price DESC')
+      elsif params[:value] == "4"
+        @stocks = set_search.order('avg_review DESC')
       elsif params[:value] == "5"
         @stocks = set_search.order('created_at DESC')
-      else
       end
 
       respond_to do |format|
         format.html
-        format.json { render 'stock', json: @stocks }
+        format.json
       end
 
       # サイドバーにカテゴリーを表示させる
@@ -131,4 +146,5 @@ class StocksController < ApplicationController
       set_search.where(category_id: @category)
     end
   end
+
 end

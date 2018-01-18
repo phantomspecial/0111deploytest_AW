@@ -3,7 +3,7 @@ class AdminsController < ApplicationController
   before_action :permission_check
 
   def index
-    # 注文履歴最新５件
+    # 注文履歴最新10件
     @recentorders = Order.order(created_at: :desc).limit(10)
     # 在庫数５未満の商品一覧
     @limitedstocks = []

@@ -104,7 +104,60 @@
     a {
       margin-right: 20px;
     }
+    &__ad {
+      &__left {
+        width: 50%;
+        border-right: 1px solid #eee;
+        text-align: center;
+          img {
+          min-width: 440px;
+          height: 200px;
+          }
+      }
+      &__right {
+        width: 50%;
+        text-align: center;
+          img {
+          min-width: 440px;
+          height: 200px;
+          }
+      }
+    }
+    &__toppage-content-ad {
+      text-align: center;
+      margin-bottom: 50px;
+        img {
+        width: 970px;
+        height: 250px;
+        }
+    }
   }
+}
+.category-list {
+  display: flex;
+  height: 235px;
+  padding-top: 10px;
+   .category {
+     height: 200px;
+     float: left;
+     display: block;
+     margin-right: 20px;
+      img {
+        min-width: 200px;
+        min-height: 200px;
+        border-radius: 50%;
+      }
+      span {
+        display: block;
+        text-align: center;
+        background-color: #FFF;
+        position: relative;
+        top: -40px;
+        height: 50px;
+        padding-top: 10px;
+        font-weight: bold;
+      }
+   }
 }
 
 // Top page Side bar
@@ -257,25 +310,6 @@
     top: 50%;
     transform: translateY(-50%);
   }
-}
-
-.admin{
-  padding: 10px 0 10px 0;
-  background-color: #141a22;
-  width: 100vw;
-  height: 30px;
-  text-align: center;
-  a {
-    text-decoration: none;
-    color: white;
-    // margin: 50%;
-    font-family: arial;
-    }
-  // &__admin{
-  //   color: #ffffff;
-  //   font-size: 10px;
-  //   padding-left: 250px;
-  // }
 }
 
 // 管理者ページ
@@ -467,6 +501,10 @@ td {
         }
       }
       &__detail{
+        td {
+          padding: 10px 20px;
+          text-align: center;
+        }
       }
     }
     &__users{
@@ -523,6 +561,8 @@ table, td, th{
   height: 60px;
   background-color: #232f3e;
   color: #FFFFFF;
+  position: relative;
+  bottom: 0;
     &__title{
       position: relative;
       top: 50%;

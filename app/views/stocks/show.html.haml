@@ -3,7 +3,11 @@
   = link_to root_path do
     = image_tag "wintersale_officeitems.png"
 .topcategory
-  文房具・オフィス用品 > 手帳・カレンダー
+  .topcategory__category
+    = @category.name
+    >
+  .topcategory__subcategory
+    = link_to @sub_category.name, category_sub_category_path(@category, @sub_category)
 .goodsbox
   .goodsbox__images
     .goodsbox__images__imagethumbnail
@@ -21,7 +25,7 @@
       = link_to @stock.maker, ""
     .goodsbox__textbox__rate
       - if @stock.reviews.present?
-        - case review_rate_calc(@stock.id)
+        - case review_rate_calc(@stock.avg_review)
           - when "00"
             .rate.rate00
           - when "05"
@@ -47,7 +51,7 @@
         = @reviews.length
         件のカスタマーレビュー
     .goodsbox__textbox__reviewlink
-      =link_to "カスタマーレビューを書きませんか？", ""
+      =link_to "カスタマーレビューを書きませんか？", "#reviewaddf"
     .borderline
     .goodsbox__textbox__referenceprice
       参考価格:¥
@@ -108,10 +112,7 @@
       = @stock.sell_price.to_s(:delimited)
       より
     .goodsbox__textbox__detail
-      ・TESTTEST
-      .br
-      ・AAAAAAAA
-      = link_to "> もっと見る",""
+      = link_to "> もっと見る", "#moreinfo"
       / 下部へ移動する
     .goodsbox__textbox__opinionform
       %i.fa.fa-comment-o.fa-flip-horizontal
@@ -255,10 +256,59 @@
   .title
     この商品に関するスポンサーの商品
   .sponsoredproduct__images
-    - 4.times do |i|
-      = image_tag "recommenditems.png", width: 250 ,height: 250
+    - @stocks.each do |stock|
+      %li.searchResult__ul__li
+        .searchResult__ul__li__img
+          = link_to stock_path(stock) do
+            = image_tag "#{stock.image}"
+        .searchResult__ul__li__title
+          = link_to stock_path(stock) do
+            %h2
+              = stock.name
+        .searchResult__ul__li__brand
+          %span
+            = stock.maker
+        .searchResult__ul__li__price
+          = link_to stock_path(stock) do
+            %span ￥
+            %span
+              = stock.sell_price.to_s(:delimited)
+          = image_tag "prime_search_icon.png", width:49, height:15
+          .searchResult__ul__li__day
+            %span.color-success 明日中
+            %span にお届け
+        .searchResult__ul__li__review
+          = link_to "" do
+            .search_result_star.review_stars
+              - case review_rate_calc(stock.avg_review)
+                - when "00"
+                  .rate.rate00
+                - when nil
+                  .rate.rate00
+                - when "05"
+                  .rate.rate05
+                - when "10"
+                  .rate.rate10
+                - when "15"
+                  .rate.rate15
+                - when "20"
+                  .rate.rate20
+                - when "25"
+                  .rate.rate25
+                - when "30"
+                  .rate.rate30
+                - when "35"
+                  .rate.rate35
+                - when "40"
+                  .rate.rate40
+                - when "45"
+                  .rate.rate45
+                -else
+                  .rate.rate50
+            %span.review_number
+              = stock.reviews.count
 .borderline
-.iteminfomation
+.iteminfomation#moreinfo
   .title
     商品の情報
   .iteminfomation__leftbox
@@ -273,11 +323,6 @@
               ブランド
               %td
                 = @stock.maker
-          %tr
-            %th
-              製品型番
-              %td
-                Test-message
   .iteminfomation__rightbox
     .iteminfomation__rightbox__registinfo
       .iteminfomation__rightbox__registinfo__title
@@ -289,17 +334,12 @@
             %th
               ASIN
               %td
-                TSTTST
+                73284691732449172
           %tr
             %th
               おすすめ度
               %td
-                = link_to "この商品の最初のレビューを書き込んでください。", ""
-          %tr
-            %th
-              発送重量
-              %td
-                20.5kg
+                = link_to "この商品の最初のレビューを書き込んでください。", "#reviewaddf"
           %tr
             %th
               Amazon.co.jpでの取り扱い開始日
@@ -315,18 +355,46 @@
 .afterview
   .title
     この商品を見た後に買っているのは?
-  - 4.times do |i|
-    .afterview__items
-      .afterview__items__image
-        = image_tag "prime.png", width:80
-      .afterview__items__title
-        TEST-ITEM-TITLE
-      .afterview__items__rate
-        TEST-RATE
-      .afterview__items__price
-        ¥ 2,000
-      .afterview__items__primemark
-        = image_tag "primemark.png", width:50
+  .afterview__stocks
+    - @stocks.shuffle.first(4).each do |stock|
+      .afterview__items.clearfix
+        .afterview__items__image
+          = link_to image_tag(stock.image), width:80
+        .afterview__items__title
+          = link_to stock.name, stock_path(stock)
+        .afterview__items__rate
+          = link_to "" do
+            .afterview__items__rate__stars.review_stars
+              - case review_rate_calc(stock.avg_review)
+                - when "00" , nil
+                  .rate.rate00
+                - when "05"
+                  .rate.rate05
+                - when "10"
+                  .rate.rate10
+                - when "15"
+                  .rate.rate15
+                - when "20"
+                  .rate.rate20
+                - when "25"
+                  .rate.rate25
+                - when "30"
+                  .rate.rate30
+                - when "35"
+                  .rate.rate35
+                - when "40"
+                  .rate.rate40
+                - when "45"
+                  .rate.rate45
+                -else
+                  .rate.rate50
+            %span.review_number
+              = stock.reviews.count
+        .afterview__items__price
+          ￥
+          = stock.sell_price.to_s(:delimited)
+        .afterview__items__primemark
+          = image_tag "primemark.png", width:50
 .borderline
 .itemdetailbox
   .title
@@ -335,14 +403,51 @@
     = @stock.detail
 .borderline
 / この商品を見た人-共通部品にするのでカット
-- if @reviews.present?
+
+-# - if @reviews.empty?
+.reviews
+  .reviews__title
+    カスタマーレビュー
+  .reviews__ratebox
+    .reviews__ratebox__ratemark
+      - if @stock.reviews.present?
+        - case review_rate_calc(@stock.avg_review)
+          - when "00"
+            .rate.rate00
+          - when "05"
+            .rate.rate05
+          - when "10"
+            .rate.rate10
+          - when "15"
+            .rate.rate15
+          - when "20"
+            .rate.rate20
+          - when "25"
+            .rate.rate25
+          - when "30"
+            .rate.rate30
+          - when "35"
+            .rate.rate35
+          - when "40"
+            .rate.rate40
+          - when "45"
+            .rate.rate45
+          -else
+            .rate.rate50
+        = @reviews.length
+        件のカスタマーレビュー
+    .goodsbox__textbox__reviewlink
+      =link_to "カスタマーレビューを書きませんか？", "#reviewaddf"
+  .borderline
+
+- unless @reviews.empty?
   .reviews
     .reviews__title
       カスタマーレビュー
     .reviews__ratebox
       .reviews__ratebox__ratemark
         - if @stock.reviews.present?
-          - case review_rate_calc(@stock.id)
+          - case review_rate_calc(@stock.avg_review)
             - when "00"
               .rate.rate00
             - when "05"
@@ -368,7 +473,7 @@
         = @reviews.length
       .reviews__ratebox__ratetext
         5つ星のうち
-        = Review.where(stock_id: @stock.id).average(:rate).round(1).to_f
+        = @stock.avg_review
       .reviews__ratebox__distribution
         .reviews__ratebox__distribution__five
           星5つ
@@ -404,7 +509,7 @@
         カスタマーレビュー
       .reviews__main__boxes
         = render partial: "shared/review", collection: @reviews, as: :review
-.reviews__addform
+.reviews__addform#reviewaddf
   - if user_signed_in?
     .reviews__addform__toplabel
       [新規レビュー]
