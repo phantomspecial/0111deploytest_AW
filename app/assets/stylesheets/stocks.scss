@@ -3,7 +3,16 @@
 }
 
 .topcategory{
-  font-size: 12px;
+  &__category{
+  margin-left: 10px;
+  font-size: 5px;
+  display: inline;
+  }
+  &__subcategory{
+  font-size: 5px;
+  position: right;
+  display: inline;
+  }
 }
 
 .goodsbox{
@@ -32,7 +41,7 @@
     }
   }
   &__textbox{
-    width: 700px;
+    width: calc(100% - 860px);
     float: left;
     &__title{
       font-size: 20px;
@@ -262,7 +271,33 @@
 
 .sponsoredproduct{
   &__images{
-  padding-left: 40px;
+  padding: 20px 0 0 40px;
+  display: flex;
+  overflow: scroll;
+    .searchResult__ul__li {
+      list-style: none;
+      display: inline-block;
+      min-width: 200px;
+      margin-left: 30px;
+        &__title a {
+          color: #0066c0;
+        }
+        &__title a:hover {
+          color: #e47911;
+        }
+    }
+    // .category-list {
+    //   display: inline-block;
+    //   min-width: 210px;
+    //   height: 200px;
+    //   text-align: center;
+    //     a {
+    //       display: block;
+    //     }
+    //     span {
+    //       display: inline-block;
+    //     }
+    // }
   }
 }
 
@@ -335,16 +370,32 @@
     padding-top: 20px;
     &__image{
       float: left;
+       a {
+         width: 100px;
+          img {
+            max-width: 80px;
+            max-height: 70px;
+          }
+       }
     }
     &__title{
       font-size: 12px;
     }
     &__rate{
       font-size: 12px;
+        span.review_number {
+          display: inline-block;
+          position: relative;
+          bottom: 4px;
+        }
+       &__stars {
+         display: inline-block;
+       }
     }
     &__price{
       float: left;
       font-size: 12px;
+      color: #9F1708;
     }
     &__primemark{
     }
@@ -496,33 +547,28 @@
 
 // aタグ処理
 .goodsbox a{
-  color: #0000FF;
   text-decoration: none;
 }
 
 .rightbox a{
-  color: #0000FF;
   text-decoration: none;
 }
 
 .campaignbox a{
-  color: #0000FF;
   text-decoration: none;
 }
 
 .sponsoredproduct a{
-  color: #0000FF;
   text-decoration: none;
 }
 
 .iteminfomation a{
-  color: #0000FF;
   text-decoration: none;
 }
 
 .afterview a{
-  color: #0000FF;
   text-decoration: none;
+  display: block;
 }
 
 
@@ -613,6 +659,20 @@
 .rate45:after{width: 90px;}
 .rate50:after{width: 100px;}
 
+// 検索結果の星
+.search_result_star {
+  .rate00:after{width: 0;}
+  .rate05:after{width: 9px;}
+  .rate10:after{width: 16px;}
+  .rate15:after{width: 24px;}
+  .rate20:after{width: 32px;}
+  .rate25:after{width: 40px;}
+  .rate30:after{width: 48px;}
+  .rate35:after{width: 57px;}
+  .rate40:after{width: 63px;}
+  .rate45:after{width: 72px;}
+  .rate50:after{width: 88px;}
+}
 
 
 // Showページ--star
@@ -675,5 +735,5 @@
 
 .edit-modal{
   padding-left: 200px;
-  padding-top:  200px;
+  padding-top:  50px;
 }

@@ -233,10 +233,17 @@
 .underbox{
   clear: both;
   &__image {
-    padding-top: 30px;
+    padding-top: 15px;
     width: 150px;
     height: 150px;
     float: left;
+    text-align: center;
+      img {
+        max-width: 150px;
+        max-height: 140px;
+        width: auto;
+        height: auto;
+      }
   }
   &__info {
     padding-top: 10px;
@@ -282,13 +289,11 @@
 
 .underbox a{
   text-decoration: none;
-  color: #0000FF;
 }
 
 .reloadbutton{
   border-style: none;
   font-size: 14px;
-  color: #0000FF;
 }
 
 
@@ -542,13 +547,10 @@
 
 
 // 注文確認画面 confirm
-.headlogo{
-  padding-top: 10px;
-  padding-left: 300px;
-}
 .deliverybox{
-  padding-left: 300px;
   width: 1200px;
+  margin: 0 auto;
+  padding-top: 20px;
   &__title{
     font-size: 24px;
     padding-top: 10px;
@@ -653,8 +655,8 @@
 .paymentbox{
   clear: both;
   padding-top: 40px;
-  padding-left: 300px;
   width: 1200px;
+  margin: 0 auto;
   &__title{
     font-size: 24px;
     padding-top: 10px;
@@ -799,25 +801,6 @@
   }
 }
 
-.giftbox{
-  clear: both;
-  padding: 40px 0 40px 300px;
-  width: 1200px;
-  &__title{
-    font-size: 24px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  &__select{
-
-  }
-  &__package{
-
-  }
-  &__message{
-
-  }
-}
 
 .footermessage{
   text-align: center;
@@ -935,7 +918,7 @@
 
 // 注文確認画面 new
 .orderbox{
-  padding-left:300px;
+  margin: 0 auto;
   width: 1200px;
   &__title{
     font-size: 20px;
@@ -1393,6 +1376,7 @@
   height: 200px;
   border-radius: 8px;
   border-color: #baddb5;
+  padding-bottom: 25px;
   &__checkicon{
     padding: 20px 20px 20px;
     font-size: 24px;
@@ -1498,6 +1482,11 @@
 .ordermessages__messagebox__links a{
   color: #0000FF;
   text-decoration: none;
+}
+.ordermessages__snsbox {
+  .content {
+    padding: 0;
+  }
 }
 
 .recommends{
