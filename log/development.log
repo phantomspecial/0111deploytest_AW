@@ -2098,3 +2098,754 @@ Processing by OrdersController#index as HTML
 Completed 200 OK in 198ms (Views: 189.1ms | ActiveRecord: 2.6ms)
 
 
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (1, 'プライム・ビデオ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (1, 'レンタル・購入', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (1, 'ウォッチリスト', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (1, 'ビデオライブラリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (1, 'どこでも視聴', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Amazon Music Unlimited', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (2, 'Prime Music', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (2, 'ミュージックライブラリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (2, 'デジタルミュージック', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (2, 'CD・レコード', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (3, 'アプリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (3, 'ゲーム', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (3, 'Fire対応アプリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (3, 'Amazonコイン', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (3, 'Amazonアプリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (3, 'アプリライブラリと端末の管理', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Echo Dot', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Echo', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Echo Plus', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Alexaスキルガイド', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Alexaスマートホーム', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (4, 'Amazon Music Unlimited', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'Fire 7', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'Fire HD 8', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'Fire HD 10', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'Fire タブレットアクセサリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'プライムフォト', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'Amazon Drive', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'Kindle本', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'Amazonビデオ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'デジタルミュージック', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, 'アプリ・ゲーム', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (5, '端末とコンテンツの管理', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (6, 'Fire TV Stick', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (6, 'Fire TV 4K対応', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (6, 'Amazon Fire TV', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (6, 'Amazon Fire TVゲームコントローラー', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (6, 'Primeビデオ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (6, 'Amazonビデオ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (6, 'Fire TV用アプリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (6, 'プライムフォト', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle Paperwhite', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle Paperwhite マンガモデル', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle Voyage', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle Oasis', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle アクセサリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle本', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindleコミック', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle洋書', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle Unlimited', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Prime Reading', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindleオーナー ライブラリー', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle無料アプリ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'Kindle Cloud Reader', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (7, 'コンテンツと端末の管理', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, 'すべてのAmazonフレッシュ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '野菜', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '果物', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '精肉・肉加工品', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '生鮮魚介類・水産加工品', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '豆腐・納豆・こんにゃく・練り製品', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '卵・乳製品・チーズ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, 'パン・シリアル・ジャム', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, 'スイーツ・スナック菓子', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '冷凍食品', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '水・ソフトドリンク・飲料', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, 'お酒・ワイン・日本酒', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '専門店グルメ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, 'ビューティー（化粧品・美容）', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, 'ドラッグストア', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, '過去に購入した商品', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (8, 'お買いものリスト', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '本', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '洋書', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'コミック', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '雑誌', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '単行本', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '文庫', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '新書', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '絵本・児童書', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '新刊・予約', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'まとめ買い・セット本', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'アウトレット本', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '中古本（古本・古書）', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '買取サービス', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'Kindle本', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'Kindleコミック', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'Kindle洋書', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'Kindle Unlimited', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'Prime Reading', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, 'Audible オーディオブック', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (9, '1か月間 無料体験', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, 'DVD', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, 'ブルーレイ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, 'Amazonビデオ', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, 'ミュージック', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, 'デジタルミュージック', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, '楽器', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, 'テレビゲーム', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, 'PCゲーム', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, 'ゲームダウンロード', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (10, '買取サービス', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'キッチン家電', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '生活家電', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '理美容家電', '2018-01-18 11:06:07', '2018-01-18 11:06:07')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '空調・季節家電', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '照明', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '大型家電', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'すべての家電', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'カメラ・ビデオカメラ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'アクションカメラ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '双眼鏡・望遠鏡・光学機器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '携帯電話・スマートフォン', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'テレビ・レコーダー', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'オーディオ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'イヤホン・ヘッドホン', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'ウェアラブルデバイス', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'アクセサリ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'すべてのカメラ・AV機器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '中古カメラ・ビデオカメラ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '中古AV機器・携帯電話', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'すべての中古', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'Amazon Launchpad', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, '買取サービス', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (11, 'Alexaスマートホーム', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'パソコン・タブレット', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'ディスプレイ・モニター', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'プリンター・インク', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'キーボード・マウス・入力機器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, '無線LAN・ネットワーク機器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'PCパーツ・CPU・内蔵HDD', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, '外付けドライブ・ストレージ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'SD・microSDカード・USBメモリ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'PCアクセサリ・記録メディア', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'ゲーミングPC・関連アクセサリ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'すべてのパソコン・周辺機器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'ビジネス・オフィス', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'セキュリティ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, '画像・映像制作', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'PCゲーム', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'ダウンロード版', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'PCソフト定期購入', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'すべてのPCソフト', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, '文具・学用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, '事務用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, '筆記具', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'ノート・メモ帳', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, '手帳・カレンダー', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'オフィス家具', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'オフィス機器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (12, 'すべての文房具・オフィス用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'キッチン用品・食器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'インテリア・雑貨', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'カーペット・カーテン・クッション', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '家具', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '収納用品・収納家具', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '布団・枕・シーツ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '掃除・洗濯・バス・トイレ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '防犯・防災', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '家電', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '手芸・画材', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'すべてのホーム＆キッチン', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '電動工具', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, '作業工具', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'リフォーム', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'ガーデニング', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'エクステリア', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'すべてのDIY・工具', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (13, 'ペット用品・ペットフード', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, '食品・グルメ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'お米・麺・パン・シリアル', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, '調味料・スパイス', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'スイーツ・お菓子', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, '水・ソフトドリンク', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'コーヒー・お茶', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'おとなセレクト', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'Nipponストア(ご当地グルメ・特産品)', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'ヤスイイね・お買い得情報', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'Dash Button (ダッシュボタン)', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'Amazonフレッシュ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'Amazonパントリー', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'Amazon定期おトク便', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, '出前特集', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'ビール・発泡酒', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'ワイン', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, '日本酒', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, '焼酎', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, '梅酒', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, '洋酒・リキュール', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'チューハイ・カクテル', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'ノンアルコール飲料', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'すべてのお酒', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (14, 'Amazonソムリエ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, '医薬品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ヘルスケア・衛生用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'コンタクトレンズ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'サプリメント', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ダイエット', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'シニアサポート・介護', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'おむつ・おしりふき', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, '日用品 (掃除・洗濯・キッチン)', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ドラッグストアへ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'Dash Button (ダッシュボタン)', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'Amazonパントリー', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'Amazon定期おトク便', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ヘアケア・スタイリング', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'スキンケア', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'メイクアップ・ネイル', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'バス・ボディケア', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'オーラルケア', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, '男性化粧品・シェービング', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ラグジュアリービューティー', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ナチュラル・オーガニック', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ドクターズコスメ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'トライアルキット', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ブランド一覧', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (15, 'ビューティーストアへ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (16, 'ベビー＆マタニティ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (16, 'おもちゃ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (16, '絵本・児童書', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (16, 'Amazonファミリー', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (16, 'ホビー', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (16, '楽器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (17, 'レディース', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (17, 'メンズ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (17, 'キッズ＆ベビー', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (17, 'バッグ・スーツケース', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (17, 'スポーツウェア＆シューズ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (18, '自転車', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (18, 'アウトドア', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (18, '釣り', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (18, 'フィットネス・トレーニング', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (18, 'ゴルフ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (18, 'スポーツウェア＆シューズ', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (18, 'すべてのスポーツ＆アウトドア', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, 'カー用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, 'バイク用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, '自動車&バイク車体', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, 'DIY・工具', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, '安全・保護用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, '工業機器', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, '研究開発用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, '衛生・清掃用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (19, 'すべての産業・研究開発用品', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (20, 'Amazon Mastercard', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (20, 'クレジットカード＆保険ストア', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (20, 'パートナーポイントプログラム', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `sub_categories` (`category_id`, `name`, `created_at`, `updated_at`) VALUES (20, 'Amazonポイント', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO `categories` (`name`, `description`, `created_at`, `updated_at`) VALUES ('Amazon ビデオ', 'a', '2018-01-18 11:06:08', '2018-01-18 11:06:08')[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
