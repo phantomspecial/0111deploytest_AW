@@ -15,8 +15,8 @@
               .nav-over__center__content__center__search-field
                 %input#stock_name_field.nav-over__center__content__center__input{ name: "keyword", placeholder: "", type: "text", value: "" }
                 .nav-over__center__content__right
-                  %span.fa.fa-search{"aria-hidden" => "true"}
-                  %button.nav-over__center__content__right__search_btn{ title: "検索", type: "submit"}
+                  = button_tag title: "検索", type: "submit", class: "nav-over__center__content__right__search_btn" do
+                    %span.fa.fa-search{"aria-hidden" => "true"}
     .nav-below
       .nav-below__categoly
         = link_to categories_path do
@@ -74,6 +74,8 @@
         .nav-below__amazonpoint__gift     ギフト券
 
       .nav-below__tools
+        - if user_signed_in?
+          = link_to "管理者の方はこちら", admins_path, class: "nav-below__tools__admin"
         .nav-below__tools__account
           = link_to users_path, :class => "nav-below__tools__account__link" do
             %span.nav-below__tools__account__nickname
