@@ -6,17 +6,35 @@ class UsersController < ApplicationController
 
   def index
     # アカウントサービス画面
+    @stocks = Stock.all
   end
 
   def show
     # マイストア画面
     @user = current_user
+
+    # サブカテゴリー別に商品を表示させる
+    @categories = Category.all
+    @subcategories = SubCategory.all
+    @stocks = []
+      @subcategories.each do |sub_category|
+        stock = Stock.where(sub_category_id: sub_category.id)
+        @stocks << stock if stock.length != 0
+      end
+
+    #最近のn件の注文
+    if user_signed_in?
+      quantitychecker_moveto_buylater
+      @cart = current_user.carts.new
+      range = Date.current.ago(14.days).beginning_of_day..Date.current.end_of_day
+      @recentorders = current_user.orders.where(created_at: range).length
+    end
   end
 
   def payments
-  	# 支払いオプション画面
-  	@user = current_user
-   	# 現在の年を格納する（クレジットカード情報登録用）
+    # 支払いオプション画面
+    @user = current_user
+    # 現在の年を格納する（クレジットカード情報登録用）
     @year = Time.current.in_time_zone('Tokyo').strftime("%Y").to_i
 
     # そのユーザにカードが登録されているかを調べる(メソッドはapplication_controller.rbに記載)
@@ -28,12 +46,12 @@ class UsersController < ApplicationController
       @customer_creditcards = gets_usercardinfo
       @default_cardid = gets_userdefaultcardid
     end
-   end
+  end
 
   def creditcard_regist
-  	# pay.jpにクレジットカード情報を登録する
+    # pay.jpにクレジットカード情報を登録する
 
-  	# トークン作成
+    # トークン作成
     token = Payjp::Token.create(
       card: {
         number: card_params[:number],
@@ -80,9 +98,9 @@ class UsersController < ApplicationController
       )
     end
 
-  	# お支払いオプションページに戻る
+    # お支払いオプションページに戻る
     # アラートを出す
-  	redirect_to payments_users_path
+    redirect_to payments_users_path
   end
 
   def creditcard_destroy
@@ -100,7 +118,7 @@ class UsersController < ApplicationController
 
   private
   def card_params
-  	params.permit(:name, :number, :month, :year, :cvc)
+    params.permit(:name, :number, :month, :year, :cvc)
   end
 
   def delete_card_params
