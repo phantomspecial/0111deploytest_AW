@@ -1,4 +1,5 @@
-$(document).on('turbolinks:load', function () {
+$(function(){
+// $(document).on('turbolinks:load', function () {
   var replaceSelectOptions = function replaceSelectOptions($select, results) {
     $select.html($('<option>'));
     return $.each(results, function () {
